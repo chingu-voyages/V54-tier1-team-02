@@ -11,7 +11,8 @@ written by an experienced Chingu, be your starting point -
 And before we go there's "one more thing"! Once you decide what to include
 in your `readme` feel free to replace the text we've provided here.
 
-> Own it & Make it your Own!
+> Draft: Title: AI Task Helper
+> Draft: Description - A web application that helps users learn tto build effective AI prompts.
 
 ## Team Documents
 
