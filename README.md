@@ -37,6 +37,6 @@ coding!
 
 - Chyna Stroud #1: [GitHub](https://github.com/Chyna397) / [LinkedIn](https://linkedin.com/in/liaccountname)
 - Stephanie Leon: [GitHub](https://github.com/stefleon33) / [LinkedIn](https://www.linkedin.com/in/stephanie-leon33/)
-
+- Alison Holland [GitHub](https://github.com/alison-ah) / [LinkedIn](https://linkedin.com/in/andersonholland)
    ...
 - Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
