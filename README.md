@@ -38,7 +38,7 @@ coding!
 - Chyna Stroud #1: [GitHub](https://github.com/Chyna397) / [LinkedIn](https://linkedin.com/in/liaccountname)
 - Stephanie Leon: [GitHub](https://github.com/stefleon33) / [LinkedIn](https://www.linkedin.com/in/stephanie-leon33/)
 - Brandi Nichols, Developer: [Github](https://github.com/branic18) / [LinkedIn](www.linkedin.com/in/brandi-nichols-dev)
-
+- Sarah Smith, Developer: [GitHub] (https://github.com/sarahlibx) / [LinkedIn] (https://www.linkedin.com/in/sarahsmithdeveloper)
   ...
 
 - Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
