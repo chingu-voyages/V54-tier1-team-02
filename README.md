@@ -35,7 +35,7 @@ Everyone on your team should add their name along with a link to their GitHub
 your repo access and to practice PR'ing with your team _before_ you start
 coding!
 
-- Chyna Stroud #1: [GitHub](https://github.com/Chyna397) / [LinkedIn](https://linkedin.com/in/liaccountname)
+- Chyna Stroud, CSM(Shadow): [GitHub](https://github.com/Chyna397) / [LinkedIn](www.linkedin.com/in/chyna-stroud-csm-3448a9213)
 - Stephanie Leon: [GitHub](https://github.com/stefleon33) / [LinkedIn](https://www.linkedin.com/in/stephanie-leon33/)
 - Alison Holland [GitHub](https://github.com/alison-ah) / [LinkedIn](https://linkedin.com/in/andersonholland)
 - Brandi Nichols, Developer: [Github](https://github.com/branic18) / [LinkedIn](www.linkedin.com/in/brandi-nichols-dev)
