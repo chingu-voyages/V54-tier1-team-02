@@ -54,6 +54,26 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.footer {
+  width: 100%;
+  padding: 20px;
+  justify-content: center;
+  background-color: black;
+  
+}
+
+.footer a{
+  color: white;
+  display: flex;
+  margin: 16px 0;
+  padding: 0 0 0 40px;
+}
+
+.footer ul {
+  text-align: left;
+  list-style: none;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -64,5 +84,41 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 60px;
+    width: 50%;
+  }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .footer {
+    display: flex;  
+  }
+
+  .footer a{
+    width: 20%;
+    margin: 16px 0;
+    padding: 0 0 0 40px;
+  }
+  
+  .footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 20%;
+    list-style: none;
+  }
+  
+  ul.dev {
+    width: 40%;
+    column-gap: 60px;
   }
 }

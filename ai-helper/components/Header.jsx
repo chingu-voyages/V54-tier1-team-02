@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-const Header = (props) => {
-    const currentDate = new Date();
+function Header() {
+    const [currentDate, setCurrentDate] = useState(new Date());
+
+    useEffect(() => {
+        const intervalID = setInterval(() => {
+            setCurrentDate(new Date());
+        }, 1000);//update every second
+
+        return() => clearInterval(intervalID);
+    }, []);
+
 
     return (
         <div>
             <h1>AI Helper</h1>
-            <p> {currentDate} </p>
+            <p> Current Date: {currentDate.toLocaleDateString()} </p>
         </div>
     );
 }
