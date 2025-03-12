@@ -3,7 +3,7 @@ import React from "react";
 function PersonaInput() {
 
     return (
-        <label className="input">
+        <div className="input">
             <h3>Persona:</h3>
             <p>Example: "You are a Product Owner, Scrum Master, UI/UX Designer, Web Developer, or
 Data Scientist who is at the beginning of your career and is looking to apply
@@ -14,7 +14,7 @@ the job market."</p>
                 placeholder="Tell me who you want me to pretend to be."
                          
             />
-        </label>
+        </div>
     );
 }
 
