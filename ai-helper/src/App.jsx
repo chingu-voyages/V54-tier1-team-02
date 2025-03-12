@@ -10,7 +10,6 @@ function App() {
     <>
       <div>
         <Header/>
-        <h2>Input Form</h2>
         <InputContainer/>
         <Footer/>
       </div>
