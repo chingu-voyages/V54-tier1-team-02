@@ -7,7 +7,7 @@ function OutputInput() {
             Output: 
             <textarea 
                 name="Output" 
-                defaultValue="'Avoid generating lots of text only a summary of the websites are needed. Also,
+                placeholder="'Avoid generating lots of text only a summary of the websites are needed. Also,
 responses should be tailored to readers with a high school level of education.
 Avoid overly technical responses.'"
                 rows={5}
