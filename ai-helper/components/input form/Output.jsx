@@ -4,12 +4,12 @@ function OutputInput() {
 
     return (
         <label className="input">
-            Output: 
+            <h3>Output:</h3> 
+            <p>Example: "The tone should be informal and the list of websites should include a link
+to the site, it's name, and cost information."</p>
             <textarea 
                 name="Output" 
-                placeholder="'Avoid generating lots of text only a summary of the websites are needed. Also,
-responses should be tailored to readers with a high school level of education.
-Avoid overly technical responses.'"
+                placeholder="Tell me how you want me to respond to your request."
                 rows={5}
                 cols={80}              
             />
