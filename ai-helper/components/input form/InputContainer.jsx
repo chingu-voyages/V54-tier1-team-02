@@ -14,6 +14,7 @@ function InputContainer() {
                 <ul><TaskInput/></ul>
                 <ul><OutputInput/></ul>
                 <ul><ConstraintInput/></ul>
+                <button type="submit">Submit form</button>
         </form>
     );
 }
