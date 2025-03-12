@@ -10,9 +10,7 @@ responses should be tailored to readers with a high school level of education.
 Avoid overly technical responses."</p>
             <textarea 
                 name="Constraint" 
-                placeholder="Tell me what to avoid."
-                rows={5}
-                cols={80}              
+                placeholder="Tell me what to avoid."           
             />
         </label>
     );

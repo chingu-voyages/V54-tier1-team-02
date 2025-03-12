@@ -10,9 +10,7 @@ services which will help me transform what I've learned into experience that
 other job applicants will not have."</p> 
             <textarea 
                 name="Task" 
-                placeholder="Tell me what information you want me give me."
-                rows={5}
-                cols={80}              
+                placeholder="Tell me what information you want me give me."              
             />
         </label>
     );

@@ -9,9 +9,7 @@ function OutputInput() {
 to the site, it's name, and cost information."</p>
             <textarea 
                 name="Output" 
-                placeholder="Tell me how you want me to respond to your request."
-                rows={5}
-                cols={80}              
+                placeholder="Tell me how you want me to respond to your request."           
             />
         </label>
     );

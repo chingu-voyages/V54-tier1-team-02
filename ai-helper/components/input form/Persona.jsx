@@ -12,8 +12,7 @@ the job market."</p>
             <textarea 
                 name="Persona" 
                 placeholder="Tell me who you want me to pretend to be."
-                rows={5}
-                cols={80}              
+                         
             />
         </label>
     );
