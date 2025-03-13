@@ -36,6 +36,7 @@ h1 {
 }
 
 button {
+  margin-bottom: 10px;
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -52,6 +53,24 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 50%;
+  align-items: center;
+  border: 1px solid black;
+  
+  margin-bottom: 40px;
+}
+
+.input { 
+  padding-right: 40px;
+}
+
+textarea {
+  width: 100%;
 }
 
 .footer {
