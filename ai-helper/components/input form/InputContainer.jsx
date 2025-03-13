@@ -21,6 +21,7 @@ function InputContainer() {
 
     return (
         <form method="post" onSubmit={handleSubmit} className="input-form">
+            <h2>Input Form</h2>
                 <ul><PersonaInput/></ul>
                 <ul><ContextInput/></ul>
                 <ul><TaskInput/></ul>
