@@ -4,12 +4,14 @@ function OutputInput() {
 
     return (
         <div className="input">
-            <h3>Output:</h3> 
+            <label for="output">Output:</label> 
             <p>Example: "The tone should be informal and the list of websites should include a link
 to the site, it's name, and cost information."</p>
             <textarea 
-                name="Output" 
-                placeholder="Tell me how you want me to respond to your request."           
+                type="text"
+                id="output"
+                name="output" 
+                placeholder="Tell me how you want me to respond to your request."   
             />
         </div>
     );

@@ -61,12 +61,16 @@ form {
   width: 50%;
   align-items: center;
   border: 1px solid black;
-  
   margin-bottom: 40px;
 }
 
 .input { 
   padding-right: 40px;
+}
+
+.input label {
+  font-size: 1.17em;
+  font-weight: bold;
 }
 
 textarea {
