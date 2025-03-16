@@ -7,6 +7,11 @@ function InputContainer() {
         // Prevent the browser from reloading the page
         e.preventDefault();
     };
+
+    const handleReset = () => {
+        setFormValues('');
+    };
+
     return (
         <div className="input-form">
             <h2>Input Form</h2>
@@ -25,6 +30,7 @@ function InputContainer() {
                         onChange={handleChange} 
                         placeholder="Tell me who you want me to pretend to be." 
                     />
+                    <button onClick={handleReset} type="reset">Reset Section</button>
                 </div>
                 <div className="input">
                     <label htmlFor="context">Context:</label> 
@@ -39,6 +45,7 @@ function InputContainer() {
                         onChange={handleChange} 
                         placeholder="Tell me background information."             
                     />
+                    <button onClick={handleReset} type="reset">Reset Section</button>
                 </div>
                 <div className="input">
                     <label htmlFor="task">Task:</label>
@@ -53,6 +60,7 @@ function InputContainer() {
                         onChange={handleChange} 
                         placeholder="Tell me what information you want me give me."          
                     />
+                    <button onClick={handleReset} type="reset">Reset Section</button>
                 </div>
                 <div className="input">
                     <label htmlFor="output">Output:</label> 
@@ -66,6 +74,7 @@ function InputContainer() {
                         onChange={handleChange}  
                         placeholder="Tell me how you want me to respond to your request."   
                     />
+                    <button onClick={handleReset} type="reset">Reset Section</button>
                 </div>
                     
                 <div className="input">
@@ -81,9 +90,14 @@ function InputContainer() {
                         onChange={handleChange} 
                         placeholder="Tell me what to avoid."           
                     />
+                    <button onClick={handleReset} type="reset">Reset Section</button>
                 </div>
+                <div>
+                    <button onClick={handleReset} type="reset">Reset Form</button>
                     <button type="submit">Submit Prompt</button>
+                </div>
             </form>
+        </div> 
     );
 }
 
