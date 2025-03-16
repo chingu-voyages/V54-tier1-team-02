@@ -22,6 +22,7 @@ function InputContainer() {
     const handleSubmit = (e) => {
         // Prevent the browser from reloading the page
         e.preventDefault();
+        console.log('Submitted text: ', formValues);
     };
 
     const handleReset = () => {
