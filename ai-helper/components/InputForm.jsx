@@ -3,6 +3,22 @@ import React, {useState} from "react";
 
 
 function InputContainer() {
+    const [formValues, setFormValues] = useState({
+        persona: '',
+        context: '',
+        task: '',
+        output: '',
+        constraint: '', 
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormValues((prevValues) => ({
+            ...prevValues,
+            [name]: value,
+        }));
+    };
+
     const handleSubmit = (e) => {
         // Prevent the browser from reloading the page
         e.preventDefault();
