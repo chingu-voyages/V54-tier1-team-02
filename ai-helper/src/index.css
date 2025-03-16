@@ -55,7 +55,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-form {
+.input-form {
   display: grid;
   grid-template-columns: 1fr;
   width: 50%;
@@ -65,6 +65,7 @@ form {
 }
 
 .input { 
+  padding-left: 40px;
   padding-right: 40px;
 }
 
