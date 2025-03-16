@@ -1,7 +1,5 @@
 import React, {useState} from "react";
 
-
-
 function InputContainer() {
     const [formValues, setFormValues] = useState({
         persona: '',
