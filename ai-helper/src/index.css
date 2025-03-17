@@ -35,6 +35,18 @@ h1 {
   line-height: 1.1;
 }
 
+ul {
+  list-style: none;
+}
+
+.note {
+  font-style: italic;
+}
+
+.emphasis {
+  text-transform: uppercase;
+}
+
 button {
   margin-bottom: 10px;
   border-radius: 8px;
@@ -77,12 +89,32 @@ textarea {
   width: 100%;
 }
 
+.result {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.result-heading-area {
+  display: flex;
+  margin-bottom: 0;
+  padding: 0;
+  align-items: baseline;
+  gap: 2em;
+}
+
+.result-box {
+  border: .5px solid lightgray;
+  height: 90%;
+  padding: 2em;
+  border-radius: 10px;
+}
+
 .footer {
   width: 100%;
   padding: 20px;
   justify-content: center;
   background-color: black;
-  
 }
 
 .footer a{
@@ -123,6 +155,20 @@ textarea {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+
+  main {
+    display: flex;
+    gap: 2em;
+  }
+
+  form {
+    width: 50%;
+  }
+
+  result {
+    width: 50%;
+  }
+
   .footer {
     display: flex;  
   }
