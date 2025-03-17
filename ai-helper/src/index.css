@@ -35,8 +35,20 @@ h1 {
   line-height: 1.1;
 }
 
+ul {
+  list-style: none;
+}
+
+.note {
+  font-style: italic;
+}
+
+.emphasis {
+  text-transform: uppercase;
+}
+
 button {
-  margin-bottom: 10px;
+  margin: 10px;
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -55,22 +67,48 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-form {
+.input-form {
   display: grid;
   grid-template-columns: 1fr;
   width: 50%;
   align-items: center;
   border: 1px solid black;
-  
   margin-bottom: 40px;
 }
 
 .input { 
+  padding-left: 40px;
   padding-right: 40px;
+}
+
+.input label {
+  font-size: 1.17em;
+  font-weight: bold;
 }
 
 textarea {
   width: 100%;
+}
+
+.result {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.result-heading-area {
+  display: flex;
+  margin-bottom: 0;
+  padding: 0;
+  align-items: baseline;
+  gap: 2em;
+}
+
+.result-box {
+  border: .5px solid lightgray;
+  height: 90%;
+  padding: 2em;
+  border-radius: 10px;
 }
 
 .footer {
@@ -78,7 +116,6 @@ textarea {
   padding: 20px;
   justify-content: center;
   background-color: black;
-  
 }
 
 .footer a{
@@ -119,6 +156,20 @@ textarea {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+
+  main {
+    display: flex;
+    gap: 2em;
+  }
+
+  form {
+    width: 50%;
+  }
+
+  result {
+    width: 50%;
+  }
+
   .footer {
     display: flex;  
   }
