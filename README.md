@@ -39,6 +39,7 @@ coding!
 - Stephanie Leon, Developer: [GitHub](https://github.com/stefleon33) / [LinkedIn](https://www.linkedin.com/in/stephanie-leon33/)
 - Alison Holland, Developer [GitHub](https://github.com/alison-ah) / [LinkedIn](https://linkedin.com/in/andersonholland)
 - Brandi Nichols, Developer: [Github](https://github.com/branic18) / [LinkedIn](www.linkedin.com/in/brandi-nichols-dev)
+Testing
 - JD Horton, Product Owner: [Github](https://github.com/JD818)
 
 - Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
