@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import InputContainer from "../components/InputForm";
 import Pentagram from "../components/Pentagram";
-import Result from "../components/Result";
+
 
 function App() {
   
@@ -15,7 +15,6 @@ function App() {
         <Pentagram/>
         <main>
           <InputContainer/>
-          <Result/>
         </main>
         <Footer/>
       </div>
