@@ -4,7 +4,8 @@ import { generateContent } from "./Model";
 import ReactMarkdown from "react-markdown";
 
 function InputContainer() {
-  const [formValues, setFormValues] = useState({
+  //Function for the user input form with different names for each section
+  const [userInput, setUserInput] = useState({
     persona: "",
     context: "",
     task: "",
@@ -14,7 +15,7 @@ function InputContainer() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormValues((prevValues) => ({
+    setUserInput((prevValues) => ({
       ...prevValues,
       [name]: value,
     }));
@@ -93,8 +94,8 @@ function InputContainer() {
             <textarea
               id="persona"
               name="persona"
-              value={formValues.persona}
               onChange={handleChange}
+              value={userInput.persona}
               placeholder="Tell me who you want me to pretend to be."
             />
             <button onClick={handleReset} type="reset">
@@ -112,8 +113,8 @@ function InputContainer() {
             <textarea
               id="context"
               name="context"
-              value={formValues.context}
               onChange={handleChange}
+              value={userInput.context}
               placeholder="Tell me background information."
             />
             <button onClick={handleReset} type="reset">
@@ -130,8 +131,8 @@ function InputContainer() {
             <textarea
               id="task"
               name="task"
-              value={formValues.task}
               onChange={handleChange}
+              value={userInput.task}
               placeholder="Tell me what information you want me give me."
             />
             <button onClick={handleReset} type="reset">
@@ -147,8 +148,8 @@ function InputContainer() {
             <textarea
               id="output"
               name="output"
-              value={formValues.output}
               onChange={handleChange}
+              value={userInput.output}
               placeholder="Tell me how you want me to respond to your request."
             />
             <button onClick={handleReset} type="reset">
@@ -167,8 +168,8 @@ function InputContainer() {
             <textarea
               id="constraint"
               name="constraint"
-              value={formValues.constraint}
               onChange={handleChange}
+              value={userInput.constraint}
               placeholder="Tell me what to avoid."
             />
             <button onClick={handleReset} type="reset">
