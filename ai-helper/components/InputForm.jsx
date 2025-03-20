@@ -18,10 +18,11 @@ function InputContainer() {
 
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleChange = (e) => {
+  //Variable to handle the user input 
+  const handleUserInput = (e) => {
     const { name, value } = e.target;
-    setUserInput((prevValues) => ({
-      ...prevValues,
+    setUserInput((prevData) => ({
+      ...prevData,
       [name]: value,
     }));
   };
