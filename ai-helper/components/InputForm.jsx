@@ -110,7 +110,7 @@ function InputContainer() {
   };
 
   return (
-    <main>
+    <section>
       <div className="input-form">
         <h2>Input Form</h2>
         <form method="post" onSubmit={handleSubmit}>
@@ -250,7 +250,7 @@ function InputContainer() {
 
         
       </div>
-    </main>
+    </section>
   );
 }
 
