@@ -4,7 +4,7 @@ import { generateContent } from "./Model";
 import ReactMarkdown from "react-markdown";
 
 function InputContainer() {
-  //Function for the user input form with different names for each section
+  //Variable for the user input form with different names for each section
   const [userInput, setUserInput] = useState({
     persona: "",
     context: "",
