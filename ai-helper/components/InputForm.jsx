@@ -211,9 +211,13 @@ function InputContainer() {
               <button onClick={handleResetForm} className="clear-btn">
                 Reset Form
               </button>
+              <button onClick={handleSubmit} className="send-btn">
+              <IoIosSend />
+              </button>
+              
+            </div>
           </div>
-            <button type="submit">Submit Prompt</button>
-          </div>
+          
         </form>
         <div className="input-container">
           <button onClick={handleClear} className="clear-btn">
