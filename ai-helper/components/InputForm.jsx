@@ -79,7 +79,6 @@ function InputContainer() {
       const res = await generateContent(textBlock);
       setResponse((prevResponse) => [
         ...prevResponse,
-        { type: "user", message: userInput },
         { type: "bot", message: res() },
       ]);
 
