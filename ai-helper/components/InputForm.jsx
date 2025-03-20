@@ -126,8 +126,9 @@ function InputContainer() {
             <textarea
               id="persona"
               name="persona"
-              onChange={handleChange}
               value={userInput.persona}
+              onChange={handleUserInput}
+              onKeyDown={handleKeyPress}
               placeholder="Tell me who you want me to pretend to be."
             />
             <button onClick={() => handleClear("persona")} type="button">
@@ -142,11 +143,12 @@ function InputContainer() {
               is needed to build websites. But, I have not worked in team projects
               with individuals in different roles."
             </p>
-            <textarea
+            <textarea 
               id="context"
               name="context"
-              onChange={handleChange}
               value={userInput.context}
+              onChange={handleUserInput}
+              onKeyDown={handleKeyPress}
               placeholder="Tell me background information."
             />
             <button onClick={() => handleClear("context")} type="button">
@@ -163,8 +165,9 @@ function InputContainer() {
             <textarea
               id="task"
               name="task"
-              onChange={handleChange}
               value={userInput.task}
+              onChange={handleUserInput}
+              onKeyDown={handleKeyPress}
               placeholder="Tell me what information you want me give me."
             />
             <button onClick={() => handleClear("task")} type="button">
@@ -180,8 +183,9 @@ function InputContainer() {
             <textarea
               id="output"
               name="output"
-              onChange={handleChange}
               value={userInput.output}
+              onChange={handleUserInput}
+              onKeyDown={handleKeyPress}
               placeholder="Tell me how you want me to respond to your request."
             />
             <button onClick={() => handleClear("output")} type="button">
@@ -200,8 +204,9 @@ function InputContainer() {
             <textarea
               id="constraint"
               name="constraint"
-              onChange={handleChange}
               value={userInput.constraint}
+              onChange={handleUserInput}
+              onKeyDown={handleKeyPress}
               placeholder="Tell me what to avoid."
             />
             <button onClick={() => handleClear("constraint")} type="button">
