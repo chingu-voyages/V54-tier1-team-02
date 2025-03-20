@@ -161,12 +161,12 @@ textarea {
     display: flex;
     gap: 2em;
   }
-
-  form {
+  
+  .input-form {
     width: 50%;
   }
 
-  result {
+  .result {
     width: 50%;
   }
 
