@@ -223,26 +223,8 @@ function InputContainer() {
           </div>
           
         </form>
-        <div className="input-container">
-          <button onClick={handleClear} className="clear-btn">
-            Clear
-          </button>
-
-          <input
-            type="text"
-            value={userInput}
-            onChange={handleUserInput}
-            onKeyDown={handleKeyPress}
-            placeholder="Type your message here..."
-            className="chat-input"
-          />
-
-          <button onClick={handleSubmit} className="send-btn">
-            <IoIosSend />
-          </button>
-        </div>
-        
       </div>
+
       <div className="result">
         <div className="result-heading-area">
           <h2>Your Result</h2>
