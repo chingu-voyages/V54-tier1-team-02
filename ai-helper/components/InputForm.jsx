@@ -27,12 +27,6 @@ function InputContainer() {
     }));
   };
 
-  //   const handleSubmit = (e) => {
-  //     // Prevent the browser from reloading the page
-  //     e.preventDefault();
-  //     console.log("Submitted text: ", formValues);
-  //   };
-
   const handleReset = () => {
     setFormValues("");
   };
@@ -51,21 +45,50 @@ function InputContainer() {
     setIsLoading(false);
   };
 
-  const handleSubmit = async () => {
-    if (!userInput.trim()) {
-      setResponse([{ type: "system", message: "Please enter a prompt.." }]);
+  //Variable to handle submission to Gemini API
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    //Checks if a field is empty and prompts the user to fill in the field
+    if (
+      !userInput.persona.trim() || 
+      !userInput.context.trim() || 
+      !userInput.task.trim() || 
+      !userInput.output.trim() || 
+      !userInput.constraint.trim()
+    ) {
+      setResponse([{ type: "system", message: "Please enter a prompt in each field.." }]);
       return;
     }
 
+    //Textblock created to contain all the user inputs being sent to the API
+    const textBlock = `
+      Persona: ${userInput.persona}
+      Context: ${userInput.context}
+      Task: ${userInput.task}
+      Output: ${userInput.output}
+      Constraint: ${userInput.constraint}
+    `;
+
     setIsLoading(true);
     try {
-      const res = await generateContent(userInput);
+      //Send formatted input to Gemini API
+      const res = await generateContent(textBlock);
       setResponse((prevResponse) => [
         ...prevResponse,
         { type: "user", message: userInput },
         { type: "bot", message: res() },
       ]);
-      setUserInput("");
+
+/*       // Resets the form
+      setUserInput({
+        persona: "",
+        context: "",
+        task: "",
+        output: "",
+        constraint: "",
+      }); */
+
     } catch (err) {
       console.error("Error generating response:", err);
       setResponse((prevResponse) => [
