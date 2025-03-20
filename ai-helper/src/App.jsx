@@ -12,13 +12,12 @@ function App() {
     <>
       <div>
         <Header/>
-        <Pentagram/>
         <main>
+          <Pentagram/>
           <InputContainer/>
         </main>
         <Footer/>
       </div>
-      
     </>
   );
 }

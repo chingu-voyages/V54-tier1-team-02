@@ -4,61 +4,93 @@ import { generateContent } from "./Model";
 import ReactMarkdown from "react-markdown";
 
 function InputContainer() {
-  const [formValues, setFormValues] = useState({
+  //Variable for the user input form with different names for each section
+  const [userInput, setUserInput] = useState({
     persona: "",
     context: "",
     task: "",
     output: "",
     constraint: "",
   });
+  
+  //Variable to handle the response from Gemini API
+  const [response, setResponse] = useState([]);
 
-  const handleChange = (e) => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  //Variable to handle the user input 
+  const handleUserInput = (e) => {
     const { name, value } = e.target;
-    setFormValues((prevValues) => ({
-      ...prevValues,
+    setUserInput((prevData) => ({
+      ...prevData,
       [name]: value,
     }));
   };
 
-  //   const handleSubmit = (e) => {
-  //     // Prevent the browser from reloading the page
-  //     e.preventDefault();
-  //     console.log("Submitted text: ", formValues);
-  //   };
-
-  const handleReset = () => {
-    setFormValues("");
+  //Variable to clear a section
+  const handleClear = (field) => {
+    setUserInput((prevData) => ({
+      ...prevData,
+      [field]: "",
+    }));
   };
 
-  const [userInput, setUserInput] = useState("");
-  const [response, setResponse] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleUserInput = (e) => {
-    setUserInput(e.target.value);
-  };
-
-  const handleClear = () => {
-    setUserInput("");
+  //Variable to clear the whole form
+  const handleResetForm = () => {
+    setUserInput({
+      persona: "",
+      context: "",
+      task: "",
+      output: "",
+      constraint: "",
+    });
     setResponse([]);
     setIsLoading(false);
   };
 
-  const handleSubmit = async () => {
-    if (!userInput.trim()) {
-      setResponse([{ type: "system", message: "Please enter a prompt.." }]);
+  //Variable to handle submission to Gemini API
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    //Checks if a field is empty and prompts the user to fill in the field
+    if (
+      !userInput.persona.trim() || 
+      !userInput.context.trim() || 
+      !userInput.task.trim() || 
+      !userInput.output.trim() || 
+      !userInput.constraint.trim()
+    ) {
+      setResponse([{ type: "system", message: "Please enter a prompt in each field.." }]);
       return;
     }
 
+    //Textblock created to contain all the user inputs being sent to the API
+    const textBlock = `
+      Persona: ${userInput.persona}
+      Context: ${userInput.context}
+      Task: ${userInput.task}
+      Output: ${userInput.output}
+      Constraint: ${userInput.constraint}
+    `;
+
     setIsLoading(true);
     try {
-      const res = await generateContent(userInput);
+      //Send formatted input to Gemini API
+      const res = await generateContent(textBlock);
       setResponse((prevResponse) => [
         ...prevResponse,
-        { type: "user", message: userInput },
         { type: "bot", message: res() },
       ]);
-      setUserInput("");
+
+/*       // Resets the form
+      setUserInput({
+        persona: "",
+        context: "",
+        task: "",
+        output: "",
+        constraint: "",
+      }); */
+
     } catch (err) {
       console.error("Error generating response:", err);
       setResponse((prevResponse) => [
@@ -78,7 +110,7 @@ function InputContainer() {
   };
 
   return (
-    <main>
+    <section>
       <div className="input-form">
         <h2>Input Form</h2>
         <form method="post" onSubmit={handleSubmit}>
@@ -93,11 +125,12 @@ function InputContainer() {
             <textarea
               id="persona"
               name="persona"
-              value={formValues.persona}
-              onChange={handleChange}
+              value={userInput.persona}
+              onChange={handleUserInput}
+              onKeyDown={handleKeyPress}
               placeholder="Tell me who you want me to pretend to be."
             />
-            <button onClick={handleReset} type="reset">
+            <button onClick={() => handleClear("persona")} type="button">
               Reset Section
             </button>
           </div>
@@ -109,14 +142,15 @@ function InputContainer() {
               is needed to build websites. But, I have not worked in team projects
               with individuals in different roles."
             </p>
-            <textarea
+            <textarea 
               id="context"
               name="context"
-              value={formValues.context}
-              onChange={handleChange}
+              value={userInput.context}
+              onChange={handleUserInput}
+              onKeyDown={handleKeyPress}
               placeholder="Tell me background information."
             />
-            <button onClick={handleReset} type="reset">
+            <button onClick={() => handleClear("context")} type="button">
               Reset Section
             </button>
           </div>
@@ -130,11 +164,12 @@ function InputContainer() {
             <textarea
               id="task"
               name="task"
-              value={formValues.task}
-              onChange={handleChange}
+              value={userInput.task}
+              onChange={handleUserInput}
+              onKeyDown={handleKeyPress}
               placeholder="Tell me what information you want me give me."
             />
-            <button onClick={handleReset} type="reset">
+            <button onClick={() => handleClear("task")} type="button">
               Reset Section
             </button>
           </div>
@@ -147,11 +182,12 @@ function InputContainer() {
             <textarea
               id="output"
               name="output"
-              value={formValues.output}
-              onChange={handleChange}
+              value={userInput.output}
+              onChange={handleUserInput}
+              onKeyDown={handleKeyPress}
               placeholder="Tell me how you want me to respond to your request."
             />
-            <button onClick={handleReset} type="reset">
+            <button onClick={() => handleClear("output")} type="button">
               Reset Section
             </button>
           </div>
@@ -167,41 +203,28 @@ function InputContainer() {
             <textarea
               id="constraint"
               name="constraint"
-              value={formValues.constraint}
-              onChange={handleChange}
+              value={userInput.constraint}
+              onChange={handleUserInput}
+              onKeyDown={handleKeyPress}
               placeholder="Tell me what to avoid."
             />
-            <button onClick={handleReset} type="reset">
+            <button onClick={() => handleClear("constraint")} type="button">
               Reset Section
             </button>
+            <div>
+              <button onClick={handleResetForm} className="clear-btn">
+                Reset Form
+              </button>
+              <button onClick={handleSubmit} className="send-btn">
+              <IoIosSend />
+              </button>
+              
+            </div>
           </div>
-          <div>
-            <button onClick={handleReset} type="reset">
-              Reset Form
-            </button>
-            <button type="submit">Submit Prompt</button>
-          </div>
+          
         </form>
-        <div className="input-container">
-          <button onClick={handleClear} className="clear-btn">
-            Clear
-          </button>
-
-          <input
-            type="text"
-            value={userInput}
-            onChange={handleUserInput}
-            onKeyDown={handleKeyPress}
-            placeholder="Type your message here..."
-            className="chat-input"
-          />
-
-          <button onClick={handleSubmit} className="send-btn">
-            <IoIosSend />
-          </button>
-        </div>
-        
       </div>
+
       <div className="result">
         <div className="result-heading-area">
           <h2>Your Result</h2>
@@ -227,7 +250,7 @@ function InputContainer() {
 
         
       </div>
-    </main>
+    </section>
   );
 }
 
