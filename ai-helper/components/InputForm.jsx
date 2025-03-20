@@ -27,16 +27,12 @@ function InputContainer() {
     }));
   };
 
-  const handleReset = () => {
-    setFormValues("");
-  };
-
-  const [userInput, setUserInput] = useState("");
-  const [response, setResponse] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleUserInput = (e) => {
-    setUserInput(e.target.value);
+  //Variable to clear a section
+  const handleClear = (field) => {
+    setUserInput((prevData) => ({
+      ...prevData,
+      [field]: "",
+    }));
   };
 
   const handleClear = () => {
@@ -127,7 +123,7 @@ function InputContainer() {
               value={userInput.persona}
               placeholder="Tell me who you want me to pretend to be."
             />
-            <button onClick={handleReset} type="reset">
+            <button onClick={() => handleClear("persona")} type="button">
               Reset Section
             </button>
           </div>
@@ -146,7 +142,7 @@ function InputContainer() {
               value={userInput.context}
               placeholder="Tell me background information."
             />
-            <button onClick={handleReset} type="reset">
+            <button onClick={() => handleClear("context")} type="button">
               Reset Section
             </button>
           </div>
@@ -164,7 +160,7 @@ function InputContainer() {
               value={userInput.task}
               placeholder="Tell me what information you want me give me."
             />
-            <button onClick={handleReset} type="reset">
+            <button onClick={() => handleClear("task")} type="button">
               Reset Section
             </button>
           </div>
@@ -181,7 +177,7 @@ function InputContainer() {
               value={userInput.output}
               placeholder="Tell me how you want me to respond to your request."
             />
-            <button onClick={handleReset} type="reset">
+            <button onClick={() => handleClear("output")} type="button">
               Reset Section
             </button>
           </div>
@@ -201,7 +197,7 @@ function InputContainer() {
               value={userInput.constraint}
               placeholder="Tell me what to avoid."
             />
-            <button onClick={handleReset} type="reset">
+            <button onClick={() => handleClear("constraint")} type="button">
               Reset Section
             </button>
           </div>
