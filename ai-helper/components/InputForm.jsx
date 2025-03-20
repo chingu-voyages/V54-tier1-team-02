@@ -35,8 +35,15 @@ function InputContainer() {
     }));
   };
 
-  const handleClear = () => {
-    setUserInput("");
+  //Variable to clear the whole form
+  const handleResetForm = () => {
+    setUserInput({
+      persona: "",
+      context: "",
+      task: "",
+      output: "",
+      constraint: "",
+    });
     setResponse([]);
     setIsLoading(false);
   };
@@ -200,11 +207,11 @@ function InputContainer() {
             <button onClick={() => handleClear("constraint")} type="button">
               Reset Section
             </button>
+            <div>
+              <button onClick={handleResetForm} className="clear-btn">
+                Reset Form
+              </button>
           </div>
-          <div>
-            <button onClick={handleReset} type="reset">
-              Reset Form
-            </button>
             <button type="submit">Submit Prompt</button>
           </div>
         </form>
