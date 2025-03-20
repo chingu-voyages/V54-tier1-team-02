@@ -12,6 +12,11 @@ function InputContainer() {
     output: "",
     constraint: "",
   });
+  
+  //Variable to handle the response from Gemini API
+  const [response, setResponse] = useState([]);
+
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
