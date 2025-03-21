@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { IoIosSend } from "react-icons/io";
 import { generateContent } from "./Model";
 import ReactMarkdown from "react-markdown";
 
