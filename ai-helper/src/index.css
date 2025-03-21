@@ -28,19 +28,34 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: black;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  text-align: left;
+  font-weight: normal;
+  margin-bottom: 0;
 }
 
-ul {
-  list-style: none;
+h2 {
+  margin: 0em;
+  font-weight: normal;
+}
+
+p {
+  text-align: left;
+}
+
+.date {
+  margin-top: .2em;
 }
 
 .note {
   font-style: italic;
+  margin-bottom: 0.5em;
+  font-size: .9em;
 }
 
 .emphasis {
@@ -68,36 +83,91 @@ button:focus-visible {
 }
 
 .input-form {
-  display: grid;
-  grid-template-columns: 1fr;
-  width: 50%;
+  width: 100%;
   align-items: center;
-  border: 1px solid black;
   margin-bottom: 40px;
 }
 
+#input-form-title {
+  display: none;
+}
+
 .input { 
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .input label {
   font-size: 1.17em;
   font-weight: bold;
+  text-align: left;
 }
 
+.form-item-heading-area {
+  display: flex;
+  margin-bottom: 0;
+  padding: 0;
+  align-items: baseline;
+  gap: 1em;
+}
+
+
 textarea {
+  width: 95%;
+  position: relative;
+  height: 5em;
+  border-radius: 8px;
+  border: black;
+  background-color: #2b2b2b;
+  padding: 1em;
+}
+
+.sec-clear-btn {
+  border-radius: 50px;
+  background-color:#444444;
+  padding: 0.2em 1em;
+}
+
+#persona, #context, #task, #output, #constraint {
+  position: relative;
+}
+
+#clear-persona, #clear-context, #clear-task, #clear-output, #clear-constraint {
+  position: absolute;
+  bottom: 0.5em;
+  right: 0em;
+}
+
+#form-level-buttons {
   width: 100%;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.clear-btn {
+  float:right;
+  border: .5px solid lightgray;
+  margin: 10px 0px;
+}
+
+.send-btn {
+  width: 65%;
+  float: left;
+  background-color: white;
+  color: black;
+  margin: 10px 0px;
 }
 
 .result {
   width: 100%;
   text-align: left;
   margin-bottom: 40px;
+  padding-top: 5em;
 }
 
 .result-heading-area {
-  display: flex;
+  flex: wrap;
   margin-bottom: 0;
   padding: 0;
   align-items: baseline;
@@ -106,28 +176,30 @@ textarea {
 
 .result-box {
   border: .5px solid lightgray;
-  height: 90%;
+  height: auto;
   padding: 2em;
   border-radius: 10px;
 }
 
 .footer {
   width: 100%;
-  padding: 20px;
+  padding: 20px 0;
   justify-content: center;
   background-color: black;
+  border-top: .5px solid lightgray;
 }
 
 .footer a{
   color: white;
   display: flex;
   margin: 16px 0;
-  padding: 0 0 0 40px;
+  padding: 0;
 }
 
 .footer ul {
   text-align: left;
   list-style: none;
+  padding: 0;
 }
 
 @media (prefers-color-scheme: light) {
@@ -151,13 +223,22 @@ textarea {
     column-gap: 60px;
     width: 50%;
   }
+
+  .clear-btn {
+    width: 25%;
+  }
+
+  .result-heading-area {
+    display: flex;
+  }  
+  
 }
 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
-  main {
+  section {
     display: flex;
     gap: 2em;
   }
@@ -166,8 +247,14 @@ textarea {
     width: 50%;
   }
 
+  .input { 
+    padding-left: 0px;
+    padding-right: 40px;
+  }
+
   .result {
     width: 50%;
+    padding-top: 0;
   }
 
   .footer {
@@ -176,8 +263,6 @@ textarea {
 
   .footer a{
     width: 20%;
-    margin: 16px 0;
-    padding: 0 0 0 40px;
   }
   
   .footer ul {

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { IoIosSend } from "react-icons/io";
 import { generateContent } from "./Model";
 import ReactMarkdown from "react-markdown";
 
@@ -112,113 +111,120 @@ function InputContainer() {
   return (
     <section>
       <div className="input-form">
-        <h2>Input Form</h2>
+        <h2 id="input-form-title">Input Form</h2>
         <form method="post" onSubmit={handleSubmit}>
           <div className="input">
-            <label htmlFor="persona">Persona:</label>
-            <p>
-              Example: "You are a Product Owner, Scrum Master, UI/UX Designer, Web
-              Developer, or Data Scientist who is at the beginning of your career
-              and is looking to apply what you've learned to build practical
-              experience to help you get noticed in the job market."
-            </p>
-            <textarea
-              id="persona"
-              name="persona"
-              value={userInput.persona}
-              onChange={handleUserInput}
-              onKeyDown={handleKeyPress}
-              placeholder="Tell me who you want me to pretend to be."
-            />
-            <button onClick={() => handleClear("persona")} type="button">
-              Reset Section
-            </button>
+            <div className="form-item-heading-area">
+              <label htmlFor="persona">Persona</label>
+              <p className="note">
+                Who you want the GPT to be based on your audience
+              </p>
+            </div>
+            <div id="persona">
+              <textarea
+                id="persona"
+                name="persona"
+                value={userInput.persona}
+                onChange={handleUserInput}
+                onKeyDown={handleKeyPress}
+                placeholder="Tell me who you want me to pretend to be."
+              />
+              <button onClick={() => handleClear("persona")} type="button" className="sec-clear-btn" id="clear-persona" title="reset persona">
+                Reset
+              </button>
+            </div>
           </div>
           <div className="input">
-            <label htmlFor="context">Context:</label>
-            <p>
-              Example: "The information provided should assume that I am a
-              Frontend Web Developer who understands the technical aspects of what
-              is needed to build websites. But, I have not worked in team projects
-              with individuals in different roles."
-            </p>
-            <textarea 
-              id="context"
-              name="context"
-              value={userInput.context}
-              onChange={handleUserInput}
-              onKeyDown={handleKeyPress}
-              placeholder="Tell me background information."
-            />
-            <button onClick={() => handleClear("context")} type="button">
-              Reset Section
-            </button>
+            <div className="form-item-heading-area">
+              <label htmlFor="context">Context</label>
+              <p className="note">
+                Background information to get more control over the output
+              </p>
+            </div>
+            <div id="context">
+              <textarea 
+                id="context"
+                name="context"
+                value={userInput.context}
+                onChange={handleUserInput}
+                onKeyDown={handleKeyPress}
+                placeholder="Tell me background information."
+              />
+              <button onClick={() => handleClear("context")} type="button" className="sec-clear-btn" id="clear-context" title="reset context">
+                Reset
+              </button>
+            </div>
           </div>
           <div className="input">
-            <label htmlFor="task">Task:</label>
-            <p>
-              Example: "Provide a list of websites for organizations that provide
-              programs and services which will help me transform what I've learned
-              into experience that other job applicants will not have."
-            </p>
-            <textarea
-              id="task"
-              name="task"
-              value={userInput.task}
-              onChange={handleUserInput}
-              onKeyDown={handleKeyPress}
-              placeholder="Tell me what information you want me give me."
-            />
-            <button onClick={() => handleClear("task")} type="button">
-              Reset Section
-            </button>
+            <div className="form-item-heading-area">
+              <label htmlFor="task">Task</label>
+              <p className="note">
+                Specific actions you need
+              </p>
+            </div>
+            <div id="task">
+              <textarea
+                id="task"
+                name="task"
+                value={userInput.task}
+                onChange={handleUserInput}
+                onKeyDown={handleKeyPress}
+                placeholder="Tell me what information you want me give me."
+              />
+              <button onClick={() => handleClear("task")} type="button" className="sec-clear-btn" id="clear-task" title="reset task">
+                Reset
+              </button>
+            </div>
           </div>
           <div className="input">
-            <label htmlFor="output">Output:</label>
-            <p>
-              Example: "The tone should be informal and the list of websites
-              should include a link to the site, it's name, and cost information."
-            </p>
-            <textarea
-              id="output"
-              name="output"
-              value={userInput.output}
-              onChange={handleUserInput}
-              onKeyDown={handleKeyPress}
-              placeholder="Tell me how you want me to respond to your request."
-            />
-            <button onClick={() => handleClear("output")} type="button">
-              Reset Section
-            </button>
+            <div className="form-item-heading-area">
+              <label htmlFor="output">Output</label>
+              <p className="note">
+                Dictate the style of responses
+              </p>
+            </div>
+            <div id="output">
+              <textarea
+                id="output"
+                name="output"
+                value={userInput.output}
+                onChange={handleUserInput}
+                onKeyDown={handleKeyPress}
+                placeholder="Tell me how you want me to respond to your request."
+              />
+              <button onClick={() => handleClear("output")} type="button" className="sec-clear-btn" id="clear-output" title="reset output">
+                Reset
+              </button>
+            </div>
           </div>
 
           <div className="input">
-            <label htmlFor="constraint">Constraint:</label>
-            <p>
-              Example: "Avoid generating lots of text only a summary of the
-              websites are needed. Also, responses should be tailored to readers
-              with a high school level of education. Avoid overly technical
-              responses."
-            </p>
-            <textarea
-              id="constraint"
-              name="constraint"
-              value={userInput.constraint}
-              onChange={handleUserInput}
-              onKeyDown={handleKeyPress}
-              placeholder="Tell me what to avoid."
-            />
-            <button onClick={() => handleClear("constraint")} type="button">
-              Reset Section
-            </button>
-            <div>
-              <button onClick={handleResetForm} className="clear-btn">
-                Reset Form
+            <div className="form-item-heading-area">
+              <label htmlFor="constraint">Constraint</label>
+              <p className="note">
+                Avoid items such as topics and tones
+              </p>
+            </div>
+            <div id="constraint">
+              <textarea
+                id="constraint"
+                name="constraint"
+                value={userInput.constraint}
+                onChange={handleUserInput}
+                onKeyDown={handleKeyPress}
+                placeholder="Tell me what to avoid."
+              />
+              <button onClick={() => handleClear("constraint")} type="button" className="sec-clear-btn" id="clear-constraint" title="reset constraint">
+                Reset
               </button>
-              <button onClick={handleSubmit} className="send-btn">
-              <IoIosSend />
+            </div>
+            <div id="form-level-buttons">
+              <button onClick={handleSubmit} className="send-btn" title="send request">
+                Generate prompt
               </button>
-              
+              <button onClick={handleResetForm} className="clear-btn" id="clear-all" title="reset form">
+                Reset
+              </button>             
             </div>
           </div>
           
@@ -237,7 +243,15 @@ function InputContainer() {
           <div className="result-box">
             {response.map((msg, index) => (
               <div key={index} className={`message ${msg.type}`}>
-                <ReactMarkdown>{msg.message}</ReactMarkdown>
+                <ReactMarkdown
+                  components={{
+                  // Map `h2` (`# heading`) to use `h3`s.
+                  h2: 'h3',
+                  }}
+                >
+                  {msg.message}
+
+                </ReactMarkdown>
               </div>
             ))}
             {isLoading && (

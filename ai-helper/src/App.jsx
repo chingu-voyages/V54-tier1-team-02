@@ -3,8 +3,6 @@ import "./App.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import InputContainer from "../components/InputForm";
-import Pentagram from "../components/Pentagram";
-
 
 function App() {
   
@@ -13,7 +11,6 @@ function App() {
       <div>
         <Header/>
         <main>
-          <Pentagram/>
           <InputContainer/>
         </main>
         <Footer/>

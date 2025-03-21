@@ -17,7 +17,6 @@ function Footer() {
                 <li>Brandi, Developer</li>
                 <li>Stephanie, Developer</li>
                 <li>Alison, Developer</li>
-                <li>Sarah, Developer</li>
             </ul>
         </div>
     );

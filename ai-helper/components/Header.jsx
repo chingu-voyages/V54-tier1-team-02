@@ -15,7 +15,7 @@ function Header() {
     return (
         <div>
             <h1>AI Helper</h1>
-            <p> Current Date: {currentDate.toLocaleDateString()} </p>
+            <p className="date">{currentDate.toLocaleDateString()} </p>
         </div>
     );
 }
