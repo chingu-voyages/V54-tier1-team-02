@@ -124,6 +124,7 @@ textarea {
 
 .sec-clear-btn {
   border-radius: 50px;
+  color: #fff;
   background-color:#444444;
   padding: 0.2em 1em;
 }
@@ -147,6 +148,7 @@ textarea {
 
 .clear-btn {
   float:right;
+  color: #fff;
   border: .5px solid lightgray;
   margin: 10px 0px;
 }
