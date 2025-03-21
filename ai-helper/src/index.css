@@ -204,7 +204,7 @@ textarea {
   padding: 0;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -215,7 +215,7 @@ textarea {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
