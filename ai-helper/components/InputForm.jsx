@@ -243,7 +243,15 @@ function InputContainer() {
           <div className="result-box">
             {response.map((msg, index) => (
               <div key={index} className={`message ${msg.type}`}>
-                <ReactMarkdown>{msg.message}</ReactMarkdown>
+                <ReactMarkdown
+                  components={{
+                  // Map `h2` (`# heading`) to use `h3`s.
+                  h2: 'h3',
+                  }}
+                >
+                  {msg.message}
+
+                </ReactMarkdown>
               </div>
             ))}
             {isLoading && (
