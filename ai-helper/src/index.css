@@ -98,7 +98,7 @@ button:focus-visible {
 
 .input { 
   padding-left: 0px;
-  padding-right: 40px;
+  padding-right: 0px;
 }
 
 .input label {
@@ -249,6 +249,11 @@ textarea {
   
   .input-form {
     width: 50%;
+  }
+
+  .input { 
+    padding-left: 0px;
+    padding-right: 40px;
   }
 
   .result {
