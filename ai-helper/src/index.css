@@ -118,6 +118,7 @@ textarea {
   height: 5em;
   border-radius: 8px;
   border: black;
+  color: #fff;
   background-color: #2b2b2b;
   padding: 1em;
 }
