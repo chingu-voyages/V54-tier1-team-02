@@ -184,6 +184,27 @@ textarea {
   border-radius: 10px;
 }
 
+.message.user {
+  text-align: right;
+}
+
+.message.bot {
+  text-align: left;
+}
+
+.message.loading {
+  text-align: center;
+  font-style: italic;
+  color: #777;
+  padding: 1rem;
+}
+
+.no-response-message {
+  text-align: center;
+  color: #999;
+  padding: 1rem;
+}
+
 .footer {
   width: 100%;
   padding: 20px 0;
