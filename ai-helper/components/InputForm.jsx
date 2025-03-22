@@ -74,10 +74,10 @@ function InputContainer() {
 
     setIsLoading(true);
     try {
-      //Send formatted input to Gemini API
-      const res = await generateContent(textBlock);
-      setResponse((prevResponse) => [
-        ...prevResponse,
+      setResponse([]); // Clear previous results
+      const res = await generateContent(textBlock); //Send formatted input to Gemini API
+      setResponse([
+        //{ type: "user", message: textBlock }, //Populates the user's input above the response.
         { type: "bot", message: res() },
       ]);
 
