@@ -104,7 +104,7 @@ function InputContainer() {
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      handleSubmit();
+      handleSubmit(e);
     }
   };
 
