@@ -124,6 +124,7 @@ textarea {
 
 .sec-clear-btn {
   border-radius: 50px;
+  color: #fff;
   background-color:#444444;
   padding: 0.2em 1em;
 }
@@ -147,6 +148,7 @@ textarea {
 
 .clear-btn {
   float:right;
+  color: #fff;
   border: .5px solid lightgray;
   margin: 10px 0px;
 }
@@ -202,7 +204,7 @@ textarea {
   padding: 0;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -213,7 +215,7 @@ textarea {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
