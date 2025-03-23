@@ -74,10 +74,10 @@ function InputContainer() {
 
     setIsLoading(true);
     try {
-      //Send formatted input to Gemini API
-      const res = await generateContent(textBlock);
-      setResponse((prevResponse) => [
-        ...prevResponse,
+      setResponse([]); // Clear previous results
+      const res = await generateContent(textBlock); //Send formatted input to Gemini API
+      setResponse([
+        //{ type: "user", message: textBlock }, //Populates the user's input above the response.
         { type: "bot", message: res() },
       ]);
 
@@ -104,7 +104,7 @@ function InputContainer() {
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      handleSubmit();
+      handleSubmit(e);
     }
   };
 
@@ -236,33 +236,29 @@ function InputContainer() {
           <h2>Your Result</h2>
           <p className="note"><span className="emphasis">Note:</span> This result is read-only</p>
         </div>
-        {response.length === 0 ? (
-          <div className="result-box">
-          </div>
-        ) : (
-          <div className="result-box">
-            {response.map((msg, index) => (
+
+        <div className="result-box">
+          {isLoading ? (
+            <div className="message loading">
+              <p className="loading-text">Generating response...</p>
+            </div>
+          ) : response.length === 0 ? (
+            <p className="no-response-message">No response yet.</p>
+          ) : (
+            response.map((msg, index) => (
               <div key={index} className={`message ${msg.type}`}>
                 <ReactMarkdown
                   components={{
-                  // Map `h2` (`# heading`) to use `h3`s.
-                  h2: 'h3',
+                    // Map `h2` (`# heading`) to use `h3`s.
+                    h2: 'h3',
                   }}
                 >
                   {msg.message}
-
                 </ReactMarkdown>
               </div>
-            ))}
-            {isLoading && (
-              <div className="result-box">
-                <p className="loading-text">Generating response...</p>
-              </div>
-            )}
-          </div>
-        )}
-
-        
+            ))
+          )}
+        </div>
       </div>
     </section>
   );

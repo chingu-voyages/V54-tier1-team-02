@@ -118,12 +118,14 @@ textarea {
   height: 5em;
   border-radius: 8px;
   border: black;
+  color: #fff;
   background-color: #2b2b2b;
   padding: 1em;
 }
 
 .sec-clear-btn {
   border-radius: 50px;
+  color: #fff;
   background-color:#444444;
   padding: 0.2em 1em;
 }
@@ -147,6 +149,7 @@ textarea {
 
 .clear-btn {
   float:right;
+  color: #fff;
   border: .5px solid lightgray;
   margin: 10px 0px;
 }
@@ -181,6 +184,27 @@ textarea {
   border-radius: 10px;
 }
 
+.message.user {
+  text-align: right;
+}
+
+.message.bot {
+  text-align: left;
+}
+
+.message.loading {
+  text-align: center;
+  font-style: italic;
+  color: #777;
+  padding: 1rem;
+}
+
+.no-response-message {
+  text-align: center;
+  color: #999;
+  padding: 1rem;
+}
+
 .footer {
   width: 100%;
   padding: 20px 0;
@@ -202,7 +226,7 @@ textarea {
   padding: 0;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -213,7 +237,7 @@ textarea {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
