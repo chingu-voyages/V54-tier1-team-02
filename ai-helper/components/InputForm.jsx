@@ -11,19 +11,31 @@ function InputContainer() {
     output: "",
     constraint: "",
   });
-  
+
   //Variable to handle the response from Gemini API
   const [response, setResponse] = useState([]);
 
   const [isLoading, setIsLoading] = useState(false);
 
-  //Variable to handle the user input 
+  const [errors, setErrors] = useState({});
+
+  //Variable to handle the user input
   const handleUserInput = (e) => {
     const { name, value } = e.target;
+
     setUserInput((prevData) => ({
       ...prevData,
       [name]: value,
     }));
+
+    // This clears the error message when the user types
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [name]: value.trim() ? "" : "Enter text in field",
+    }));
+
+    console.log("Updated userInput:", userInput);
+    console.log("Updated errors:", errors);
   };
 
   //Variable to clear a section
@@ -36,6 +48,8 @@ function InputContainer() {
 
   //Variable to clear the whole form
   const handleResetForm = () => {
+    setErrors({});
+
     setUserInput({
       persona: "",
       context: "",
@@ -51,15 +65,31 @@ function InputContainer() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const newErrors = Object.keys(userInput).reduce((acc, key) => {
+      if (!userInput[key].trim()) {
+        acc[key] = "Enter text in field";
+      }
+      return acc;
+    }, {});
+
+    setErrors({ ...newErrors });
+
+    // If there are any errors, prevent submission
+    if (Object.values(newErrors).some((error) => error !== "")) {
+      return;
+    }
+
     //Checks if a field is empty and prompts the user to fill in the field
     if (
-      !userInput.persona.trim() || 
-      !userInput.context.trim() || 
-      !userInput.task.trim() || 
-      !userInput.output.trim() || 
+      !userInput.persona.trim() ||
+      !userInput.context.trim() ||
+      !userInput.task.trim() ||
+      !userInput.output.trim() ||
       !userInput.constraint.trim()
     ) {
-      setResponse([{ type: "system", message: "Please enter a prompt in each field.." }]);
+      setResponse([
+        { type: "system", message: "Please enter a prompt in each field." },
+      ]);
       return;
     }
 
@@ -81,7 +111,7 @@ function InputContainer() {
         { type: "bot", message: res() },
       ]);
 
-/*       // Resets the form
+      /*       // Resets the form
       setUserInput({
         persona: "",
         context: "",
@@ -89,7 +119,6 @@ function InputContainer() {
         output: "",
         constraint: "",
       }); */
-
     } catch (err) {
       console.error("Error generating response:", err);
       setResponse((prevResponse) => [
@@ -107,6 +136,8 @@ function InputContainer() {
       handleSubmit(e);
     }
   };
+
+  console.log("Current errors state:", errors);
 
   return (
     <section>
@@ -129,10 +160,17 @@ function InputContainer() {
                 onKeyDown={handleKeyPress}
                 placeholder="Tell me who you want me to pretend to be."
               />
-              <button onClick={() => handleClear("persona")} type="button" className="sec-clear-btn" id="clear-persona" title="reset persona">
+              <button
+                onClick={() => handleClear("persona")}
+                type="button"
+                className="sec-clear-btn"
+                id="clear-persona"
+                title="reset persona"
+              >
                 Reset
               </button>
             </div>
+            {errors.persona && <p className="error">{errors.persona}</p>}
           </div>
           <div className="input">
             <div className="form-item-heading-area">
@@ -142,7 +180,7 @@ function InputContainer() {
               </p>
             </div>
             <div id="context">
-              <textarea 
+              <textarea
                 id="context"
                 name="context"
                 value={userInput.context}
@@ -150,17 +188,24 @@ function InputContainer() {
                 onKeyDown={handleKeyPress}
                 placeholder="Tell me background information."
               />
-              <button onClick={() => handleClear("context")} type="button" className="sec-clear-btn" id="clear-context" title="reset context">
+              <button
+                onClick={() => handleClear("context")}
+                type="button"
+                className="sec-clear-btn"
+                id="clear-context"
+                title="reset context"
+              >
                 Reset
               </button>
             </div>
+            {errors.context && (
+              <p className="error-message">{errors.context}</p>
+            )}
           </div>
           <div className="input">
             <div className="form-item-heading-area">
               <label htmlFor="task">Task</label>
-              <p className="note">
-                Specific actions you need
-              </p>
+              <p className="note">Specific actions you need</p>
             </div>
             <div id="task">
               <textarea
@@ -171,17 +216,22 @@ function InputContainer() {
                 onKeyDown={handleKeyPress}
                 placeholder="Tell me what information you want me give me."
               />
-              <button onClick={() => handleClear("task")} type="button" className="sec-clear-btn" id="clear-task" title="reset task">
+              <button
+                onClick={() => handleClear("task")}
+                type="button"
+                className="sec-clear-btn"
+                id="clear-task"
+                title="reset task"
+              >
                 Reset
               </button>
             </div>
+            {errors.task && <p className="error-message">{errors.task}</p>}
           </div>
           <div className="input">
             <div className="form-item-heading-area">
               <label htmlFor="output">Output</label>
-              <p className="note">
-                Dictate the style of responses
-              </p>
+              <p className="note">Dictate the style of responses</p>
             </div>
             <div id="output">
               <textarea
@@ -192,19 +242,25 @@ function InputContainer() {
                 onKeyDown={handleKeyPress}
                 placeholder="Tell me how you want me to respond to your request."
               />
-              <button onClick={() => handleClear("output")} type="button" className="sec-clear-btn" id="clear-output" title="reset output">
+              <button
+                onClick={() => handleClear("output")}
+                type="button"
+                className="sec-clear-btn"
+                id="clear-output"
+                title="reset output"
+              >
                 Reset
               </button>
             </div>
+            {errors.output && <p className="error-message">{errors.output}</p>}
           </div>
 
           <div className="input">
             <div className="form-item-heading-area">
               <label htmlFor="constraint">Constraint</label>
-              <p className="note">
-                Avoid items such as topics and tones
-              </p>
+              <p className="note">Avoid items such as topics and tones</p>
             </div>
+
             <div id="constraint">
               <textarea
                 id="constraint"
@@ -214,27 +270,46 @@ function InputContainer() {
                 onKeyDown={handleKeyPress}
                 placeholder="Tell me what to avoid."
               />
-              <button onClick={() => handleClear("constraint")} type="button" className="sec-clear-btn" id="clear-constraint" title="reset constraint">
+              <button
+                onClick={() => handleClear("constraint")}
+                type="button"
+                className="sec-clear-btn"
+                id="clear-constraint"
+                title="reset constraint"
+              >
                 Reset
               </button>
             </div>
-            <div id="form-level-buttons">
-              <button onClick={handleSubmit} className="send-btn" title="send request">
-                Generate prompt
-              </button>
-              <button onClick={handleResetForm} className="clear-btn" id="clear-all" title="reset form">
-                Reset
-              </button>             
-            </div>
+            {errors.constraint && (
+              <p className="error-message">{errors.constraint}</p>
+            )}
           </div>
-          
+          <div id="form-level-buttons">
+            <button
+              onClick={handleSubmit}
+              className="send-btn"
+              title="send request"
+            >
+              Generate prompt
+            </button>
+          </div>
         </form>
+        <button
+          onClick={handleResetForm}
+          className="clear-btn"
+          id="clear-all"
+          title="reset form"
+        >
+          Reset
+        </button>
       </div>
 
       <div className="result">
         <div className="result-heading-area">
           <h2>Your Result</h2>
-          <p className="note"><span className="emphasis">Note:</span> This result is read-only</p>
+          <p className="note">
+            <span className="emphasis">Note:</span> This result is read-only
+          </p>
         </div>
 
         <div className="result-box">
@@ -250,7 +325,7 @@ function InputContainer() {
                 <ReactMarkdown
                   components={{
                     // Map `h2` (`# heading`) to use `h3`s.
-                    h2: 'h3',
+                    h2: "h3",
                   }}
                 >
                   {msg.message}
