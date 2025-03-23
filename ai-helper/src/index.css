@@ -162,6 +162,13 @@ textarea {
   margin: 10px 0px;
 }
 
+.send-btn:focus,
+.send-btn:focus-visible {
+  background-color: #7D0ADB;
+  color: white;
+  font-weight: bold;
+}
+
 .result {
   width: 100%;
   text-align: left;
