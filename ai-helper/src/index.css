@@ -127,7 +127,12 @@ textarea {
   border-radius: 50px;
   color: #fff;
   background-color:#444444;
+  border: 1px solid #6b6b6b;
   padding: 0.2em 1em;
+}
+
+.sec-clear-btn:hover {
+  background-color:#0A0808;
 }
 
 #persona, #context, #task, #output, #constraint {
@@ -167,6 +172,12 @@ textarea {
   background-color: #7D0ADB;
   color: white;
   font-weight: bold;
+}
+
+.send-btn:hover {
+  color: #ffe;
+  background-color: #111111;
+  border: 1px solid #ffe;
 }
 
 .error-message {
