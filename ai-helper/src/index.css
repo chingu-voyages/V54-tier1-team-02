@@ -94,7 +94,7 @@ button:focus-visible {
 
 .input { 
   padding-left: 0px;
-  padding-right: 0px;
+  padding-right: 0.25em;
 }
 
 .input label {
@@ -117,10 +117,14 @@ textarea {
   position: relative;
   height: 5em;
   border-radius: 8px;
-  border: black;
-  color: #fff;
+  border: 3px solid #fff;
+  color: #a0a0a0;
   background-color: #2b2b2b;
   padding: 1em;
+}
+
+.input-error {
+  border: 3px solid #E44444;
 }
 
 .sec-clear-btn {
@@ -170,13 +174,12 @@ textarea {
 }
 
 .error-message {
+  display: flex;
+  align-items: center;
   color: #E44444;
-  text-align: center;
   margin: 0;
-  border: 1px solid #E44444;
-  border-radius: 15px;
-  width: 40%;
-  padding: 3px 5px;
+  font-weight: bold;
+  gap: .5em;
 }
 
 .result {
@@ -269,10 +272,6 @@ textarea {
     width: 25%;
   }
 
-  .error-message {
-    width: 28%;
-  }
-
   .result-heading-area {
     display: flex;
   }  
@@ -294,7 +293,6 @@ textarea {
 
   .input { 
     padding-left: 0px;
-    padding-right: 40px;
   }
 
   .result {
