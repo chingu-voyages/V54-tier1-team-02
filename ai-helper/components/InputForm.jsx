@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { generateContent } from "./Model";
 import ReactMarkdown from "react-markdown";
+import { AiFillExclamationCircle } from "react-icons/ai";
+
 
 function InputContainer() {
   //Variable for the user input form with different names for each section
@@ -67,7 +69,7 @@ function InputContainer() {
 
     const newErrors = Object.keys(userInput).reduce((acc, key) => {
       if (!userInput[key].trim()) {
-        acc[key] = "Enter text in field";
+        acc[key] = <span className="error-message"><AiFillExclamationCircle />Enter text in field</span>
       }
       return acc;
     }, {});
@@ -159,6 +161,7 @@ function InputContainer() {
                 onChange={handleUserInput}
                 onKeyDown={handleKeyPress}
                 placeholder="Tell me who you want me to pretend to be."
+                className={errors.persona ? "input-error" : ""}
               />
               <button
                 onClick={() => handleClear("persona")}
@@ -187,6 +190,7 @@ function InputContainer() {
                 onChange={handleUserInput}
                 onKeyDown={handleKeyPress}
                 placeholder="Tell me background information."
+                className={errors.context ? "input-error" : ""}
               />
               <button
                 onClick={() => handleClear("context")}
@@ -215,6 +219,7 @@ function InputContainer() {
                 onChange={handleUserInput}
                 onKeyDown={handleKeyPress}
                 placeholder="Tell me what information you want me give me."
+                className={errors.task ? "input-error" : ""}
               />
               <button
                 onClick={() => handleClear("task")}
@@ -241,6 +246,7 @@ function InputContainer() {
                 onChange={handleUserInput}
                 onKeyDown={handleKeyPress}
                 placeholder="Tell me how you want me to respond to your request."
+                className={errors.output ? "input-error" : ""}
               />
               <button
                 onClick={() => handleClear("output")}
@@ -269,6 +275,7 @@ function InputContainer() {
                 onChange={handleUserInput}
                 onKeyDown={handleKeyPress}
                 placeholder="Tell me what to avoid."
+                className={errors.constraint ? "input-error" : ""}
               />
               <button
                 onClick={() => handleClear("constraint")}
