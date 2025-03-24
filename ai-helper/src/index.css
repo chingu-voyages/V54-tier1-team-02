@@ -169,6 +169,16 @@ textarea {
   font-weight: bold;
 }
 
+.error-message {
+  color: #E44444;
+  text-align: center;
+  margin: 0;
+  border: 1px solid #E44444;
+  border-radius: 15px;
+  width: 40%;
+  padding: 3px 5px;
+}
+
 .result {
   width: 100%;
   text-align: left;
@@ -257,6 +267,10 @@ textarea {
 
   .clear-btn {
     width: 25%;
+  }
+
+  .error-message {
+    width: 28%;
   }
 
   .result-heading-area {

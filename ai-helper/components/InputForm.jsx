@@ -170,7 +170,7 @@ function InputContainer() {
                 Reset
               </button>
             </div>
-            {errors.persona && <p className="error">{errors.persona}</p>}
+            {errors.persona && <p className="error-message">{errors.persona}</p>}
           </div>
           <div className="input">
             <div className="form-item-heading-area">
