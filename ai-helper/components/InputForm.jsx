@@ -3,7 +3,6 @@ import { generateContent } from "./Model";
 import ReactMarkdown from "react-markdown";
 import { AiFillExclamationCircle } from "react-icons/ai";
 
-
 function InputContainer() {
   //Variable for the user input form with different names for each section
   const [userInput, setUserInput] = useState({
@@ -69,7 +68,12 @@ function InputContainer() {
 
     const newErrors = Object.keys(userInput).reduce((acc, key) => {
       if (!userInput[key].trim()) {
-        acc[key] = <span className="error-message"><AiFillExclamationCircle />Enter text in field</span>
+        acc[key] = (
+          <span className="error-message">
+            <AiFillExclamationCircle />
+            Enter text in field
+          </span>
+        );
       }
       return acc;
     }, {});
@@ -109,18 +113,9 @@ function InputContainer() {
       setResponse([]); // Clear previous results
       const res = await generateContent(textBlock); //Send formatted input to Gemini API
       setResponse([
-        //{ type: "user", message: textBlock }, //Populates the user's input above the response.
+        // { type: "user", message: textBlock }, //Populates the user's input above the response.
         { type: "bot", message: res() },
       ]);
-
-      /*       // Resets the form
-      setUserInput({
-        persona: "",
-        context: "",
-        task: "",
-        output: "",
-        constraint: "",
-      }); */
     } catch (err) {
       console.error("Error generating response:", err);
       setResponse((prevResponse) => [
@@ -173,7 +168,9 @@ function InputContainer() {
                 Reset
               </button>
             </div>
-            {errors.persona && <p className="error-message">{errors.persona}</p>}
+            {errors.persona && (
+              <p className="error-message">{errors.persona}</p>
+            )}
           </div>
           <div className="input">
             <div className="form-item-heading-area">
