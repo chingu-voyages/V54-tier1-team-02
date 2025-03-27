@@ -32,7 +32,11 @@ function InputContainer() {
     // This clears the error message when the user types
     setErrors((prevErrors) => ({
       ...prevErrors,
-      [name]: value.trim() ? "" : "Enter text in field",
+      [name]: value.trim() ? "" : 
+        <span className="error-message">
+          <AiFillExclamationCircle />
+          Enter text in field
+        </span>
     }));
 
   };
