@@ -1,4 +1,5 @@
 # AI Helper
+
 A web application that helps users learn to build effective AI prompts.
 
 ## Overview
@@ -12,6 +13,7 @@ This application, follows a structured methodology to help the user build good p
 To test them, the app will use Google Gemini's API to run the prompt and display the result from Gemini.
 
 The structured methodology to follow for creating a prompt is called a [Pentagram](https://ai.plainenglish.io/prompt-engineering-with-pentagram-framework-persona-context-task-output-and-constraint-3717b0733578) and it consists of the following parts:
+
 - Persona
 - Context
 - Task
@@ -23,24 +25,29 @@ Our app prompts you to include each component before generating a result.
 ## Running the project
 
 ### Live Version:
+
 [AI Helper](https://ai-helper-gemini.netlify.app/)
 
 ### From the Repo:
+
 1. Clone this project locally
 2. [Get a Gemini API Key](https://ai.google.dev/gemini-api/docs/api-key)
 3. Create a .env file in your root folder
-4. In the .env file, add export VITE_GEMINI_API_KEY = Your-API-Key 
+4. In the .env file, add export VITE_GEMINI_API_KEY = Your-API-Key
 5. Run `npm install` in your bash / command line
 6. Run `npm run dev` in your bash / command line
 
 ## Dependencies
+
     "@google/generative-ai": "^0.24.0",
     "dotenv": "^16.4.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
     "react-markdown": "^10.1.0"
+
 ### Dev Dependencies
+
     "@eslint/js": "^9.21.0",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
@@ -53,8 +60,8 @@ Our app prompts you to include each component before generating a result.
 
 ## Our Team
 
-- Stephanie Leon, Developer: [GitHub](https://github.com/stefleon33) / [LinkedIn](https://www.linkedin.com/in/stephanie-leon33/)
-- Alison Holland, Developer [GitHub](https://github.com/alison-ah) / [LinkedIn](https://linkedin.com/in/andersonholland)
-- Brandi Nichols, Developer: [Github](https://github.com/branic18) / [LinkedIn](www.linkedin.com/in/brandi-nichols-dev)
-- Chyna Stroud, CSM: [GitHub](https://github.com/Chyna397) / [LinkedIn](www.linkedin.com/in/chyna-stroud-csm-3448a9213)
-- JD Horton, Product Owner: [Github](https://github.com/JD818)
+- Stephanie Leon, Developer: [GitHub](https://github.com/stefleon33){:target="_blank"} / [LinkedIn](https://www.linkedin.com/in/stephanie-leon33/){:target="_blank"}
+- Alison Holland, Developer [GitHub](https://github.com/alison-ah){:target="_blank"} / [LinkedIn](https://linkedin.com/in/andersonholland){:target="_blank"}
+- Brandi Nichols, Developer: [Github](https://github.com/branic18){:target="_blank"} / [LinkedIn](https://www.linkedin.com/in/brandi-nichols-dev){:target="_blank"}
+- Chyna Stroud, CSM: [GitHub](https://github.com/Chyna397){:target="_blank"} / [LinkedIn](https://www.linkedin.com/in/chyna-stroud-csm-3448a9213){:target="_blank"}
+- JD Horton, Product Owner: [Github](https://github.com/JD818){:target="_blank"}
