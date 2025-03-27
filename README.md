@@ -26,7 +26,7 @@ Our app prompts you to include each component before generating a result.
 
 ### Live Version:
 
-[AI Helper](ADD LINK WHEN AVAILABLE)
+[AI Helper](https://ai-helper-gemini.netlify.app/)
 
 ### From the Repo:
 

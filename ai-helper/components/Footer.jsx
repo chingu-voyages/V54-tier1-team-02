@@ -9,7 +9,7 @@ function Footer() {
       >
         GitHub Repo
       </a>
-      <ul className="dev">
+      <ul>
         <li> <a href="" target="_blank">Brandi, Developer</a></li>
         <li> <a href="" target="_blank">Stephanie, Developer</a></li>
         <li> <a href="" target="_blank">Alison, Developer</a></li>
