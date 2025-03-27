@@ -111,7 +111,6 @@ button:focus-visible {
   gap: 1em;
 }
 
-
 textarea {
   width: 95%;
   position: relative;
@@ -258,6 +257,11 @@ textarea {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+
+  section {
+    width: 750px;
+  }
+
   .footer ul {
     gap: 2em;
   }
@@ -279,10 +283,12 @@ textarea {
   section {
     display: flex;
     gap: 2em;
+    width: 1150px;
   }
   
   .input-form {
     width: 50%;
+    margin-bottom: auto;
   }
 
   .input { 
@@ -291,7 +297,13 @@ textarea {
 
   .result {
     width: 50%;
+    height: 760px;
     padding-top: 0;
+  }
+
+  .result-box {
+    height: 90%;
+    overflow: scroll;
   }
 
   .footer {
