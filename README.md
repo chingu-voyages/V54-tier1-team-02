@@ -60,8 +60,8 @@ Our app prompts you to include each component before generating a result.
 
 ## Our Team
 
-- Stephanie Leon, Developer: [GitHub](https://github.com/stefleon33){:target="_blank"} / [LinkedIn](https://www.linkedin.com/in/stephanie-leon33/){:target="_blank"}
-- Alison Holland, Developer [GitHub](https://github.com/alison-ah){:target="_blank"} / [LinkedIn](https://linkedin.com/in/andersonholland){:target="_blank"}
-- Brandi Nichols, Developer: [Github](https://github.com/branic18){:target="_blank"} / [LinkedIn](https://www.linkedin.com/in/brandi-nichols-dev){:target="_blank"}
-- Chyna Stroud, CSM: [GitHub](https://github.com/Chyna397){:target="_blank"} / [LinkedIn](https://www.linkedin.com/in/chyna-stroud-csm-3448a9213){:target="_blank"}
-- JD Horton, Product Owner: [Github](https://github.com/JD818){:target="_blank"}
+- Stephanie Leon, Developer: [GitHub](https://github.com/stefleon33) / [LinkedIn](https://www.linkedin.com/in/stephanie-leon33/)
+- Alison Holland, Developer [GitHub](https://github.com/alison-ah) / [LinkedIn](https://linkedin.com/in/andersonholland)
+- Brandi Nichols, Developer: [Github](https://github.com/branic18) / [LinkedIn](https://www.linkedin.com/in/brandi-nichols-dev)
+- Chyna Stroud, CSM: [GitHub](https://github.com/Chyna397) / [LinkedIn](https://www.linkedin.com/in/chyna-stroud-csm-3448a9213)
+- JD Horton, Product Owner: [Github](https://github.com/JD818)
