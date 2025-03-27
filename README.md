@@ -23,7 +23,7 @@ Our app prompts you to include each component before generating a result.
 ## Running the project
 
 ### Live Version:
-[AI Helper](ADD LINK WHEN AVAILABLE)
+[AI Helper](https://ai-helper-gemini.netlify.app/)
 
 ### From the Repo:
 1. Clone this project locally
@@ -53,9 +53,8 @@ Our app prompts you to include each component before generating a result.
 
 ## Our Team
 
-- Chyna Stroud, CSM(Shadow): [GitHub](https://github.com/Chyna397) / [LinkedIn](www.linkedin.com/in/chyna-stroud-csm-3448a9213)
 - Stephanie Leon, Developer: [GitHub](https://github.com/stefleon33) / [LinkedIn](https://www.linkedin.com/in/stephanie-leon33/)
 - Alison Holland, Developer [GitHub](https://github.com/alison-ah) / [LinkedIn](https://linkedin.com/in/andersonholland)
 - Brandi Nichols, Developer: [Github](https://github.com/branic18) / [LinkedIn](www.linkedin.com/in/brandi-nichols-dev)
+- Chyna Stroud, CSM: [GitHub](https://github.com/Chyna397) / [LinkedIn](www.linkedin.com/in/chyna-stroud-csm-3448a9213)
 - JD Horton, Product Owner: [Github](https://github.com/JD818)
-- Ronysha, Scrum Master (Primary)
