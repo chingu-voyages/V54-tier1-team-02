@@ -35,8 +35,6 @@ function InputContainer() {
       [name]: value.trim() ? "" : "Enter text in field",
     }));
 
-    console.log("Updated userInput:", userInput);
-    console.log("Updated errors:", errors);
   };
 
   //Variable to clear a section
@@ -117,7 +115,6 @@ function InputContainer() {
         { type: "bot", message: res() },
       ]);
     } catch (err) {
-      console.error("Error generating response:", err);
       setResponse((prevResponse) => [
         ...prevResponse,
         { type: "system", message: "Failed to generate response" },
@@ -133,8 +130,6 @@ function InputContainer() {
       handleSubmit(e);
     }
   };
-
-  console.log("Current errors state:", errors);
 
   return (
     <section>
