@@ -113,7 +113,7 @@ button:focus-visible {
 }
 
 textarea {
-  width: 95%;
+  width: 89%;
   position: relative;
   height: 5em;
   border-radius: 8px;
@@ -264,6 +264,10 @@ textarea {
     width: 750px;
   }
 
+  textarea {
+    width: 95%;
+  }
+  
   .footer ul {
     gap: 2em;
   }
