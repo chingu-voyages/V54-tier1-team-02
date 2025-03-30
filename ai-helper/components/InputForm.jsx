@@ -170,7 +170,7 @@ function InputContainer() {
             <div className="form-item-heading-area">
               <label htmlFor="context">Context</label>
               <p className="note">
-                Background information to for control over the output
+                Background information for control over the output
               </p>
             </div>
             <div id="context">
