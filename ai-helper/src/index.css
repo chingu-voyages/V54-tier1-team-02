@@ -95,6 +95,7 @@ button:focus-visible {
 .input { 
   padding-left: 0px;
   padding-right: 0.25em;
+  height: 160px;
 }
 
 .input label {

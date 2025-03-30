@@ -34,7 +34,6 @@ function InputContainer() {
       ...prevErrors,
       [name]: value.trim() ? "" : "Enter text in field",
     }));
-
   };
 
   //Variable to clear a section
@@ -171,7 +170,7 @@ function InputContainer() {
             <div className="form-item-heading-area">
               <label htmlFor="context">Context</label>
               <p className="note">
-                Background information to get more control over the output
+                Background information to for control over the output
               </p>
             </div>
             <div id="context">
