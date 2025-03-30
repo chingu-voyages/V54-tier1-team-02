@@ -42,11 +42,17 @@ h1 {
 h2 {
   margin: 0em;
   font-weight: normal;
+  line-height: 1.2em;
 }
 
 p {
   text-align: left;
   font-size: 16px;
+}
+
+.pentagram p {
+  text-align: center;
+  margin: 0.5em 0 2em;
 }
 
 .date {
@@ -267,7 +273,7 @@ textarea {
   textarea {
     width: 95%;
   }
-  
+
   .footer ul {
     gap: 2em;
   }
