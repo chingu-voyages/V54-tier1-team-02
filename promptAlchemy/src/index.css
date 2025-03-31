@@ -102,7 +102,6 @@ button:focus-visible {
 .input { 
   padding-left: 0px;
   padding-right: 0.25em;
-  height: 160px;
 }
 
 .input label {
@@ -322,13 +321,12 @@ textarea {
 
   .result {
     width: 50%;
-    height: 865px;
     padding-top: 0;
   }
 
   .result-box {
-    height: 90%;
-    overflow: scroll;
+    height: 898px;
+    overflow: auto;
   }
 
   .footer {
