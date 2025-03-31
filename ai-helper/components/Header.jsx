@@ -14,7 +14,7 @@ function Header() {
 
     return (
         <div>
-            <h1>AI Helper</h1>
+            <h1>PromptAlchemy</h1>
             <p className="date">{currentDate.toLocaleDateString()} </p>
         </div>
     );
