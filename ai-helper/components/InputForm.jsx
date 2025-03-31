@@ -117,7 +117,7 @@ function InputContainer() {
         // { type: "user", message: textBlock }, //Populates the user's input above the response.
         { type: "bot", message: res() },
       ]);
-    } catch (err) {
+    } catch {
       setResponse((prevResponse) => [
         ...prevResponse,
         { type: "system", message: "Failed to generate response" },

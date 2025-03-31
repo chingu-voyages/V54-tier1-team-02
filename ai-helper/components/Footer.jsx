@@ -10,13 +10,13 @@ function Footer() {
         GitHub Repo
       </a>
       <ul>
-        <li> <a href="" target="_blank">Brandi, Developer</a></li>
-        <li> <a href="" target="_blank">Stephanie, Developer</a></li>
-        <li> <a href="" target="_blank">Alison, Developer</a></li>
+        <li> <a href="https://www.linkedin.com/in/brandi-nichols-dev" target="_blank">Brandi Nichols, Developer</a></li>
+        <li> <a href="https://www.linkedin.com/in/stephanie-leon33/" target="_blank">Stephanie Leon, Developer</a></li>
+        <li> <a href="https://linkedin.com/in/andersonholland" target="_blank">Alison Holland, Developer</a></li>
       </ul>
       <ul>
-        <li> <a href="" target="_blank">JD, Product Owner</a></li>
-        <li> <a href="" target="_blank">Chyna, Scrum Master</a></li>
+        <li> <a href="" target="_blank">JD Horton, Product Owner</a></li>
+        <li> <a href="https://www.linkedin.com/in/chyna-stroud-csm-3448a9213" target="_blank">Chyna Stroud, Scrum Master</a></li>
       </ul>
     </div>
   );
