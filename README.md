@@ -1,10 +1,10 @@
-# AI Helper
+# PromptAlchemy
 
 A web application that helps users learn to build effective AI prompts.
 
 ## Overview
 
-This app was created through a [Chingu](https://www.chingu.io/) tier 1 voyage. As a team, we built a web application, AI Helper, which lets its users become more effective at building AI prompts.
+This app was created through a [Chingu](https://www.chingu.io/) tier 1 voyage. As a team, we built a web application, PromptAlchemy, which lets its users become more effective at building AI prompts.
 
 ## Features
 
@@ -26,7 +26,7 @@ Our app prompts you to include each component before generating a result.
 
 ### Live Version:
 
-[AI Helper](https://ai-helper-gemini.netlify.app/)
+[PromptAlchemy](https://promptalchemy-gemini.netlify.app/)
 
 ### From the Repo:
 
