@@ -146,29 +146,31 @@ function InputContainer() {
                 Who you want the GPT to be based on your audience
               </p>
             </div>
-            <div id="persona">
-              <textarea
-                id="persona"
-                name="persona"
-                value={userInput.persona}
-                onChange={handleUserInput}
-                onKeyDown={handleKeyPress}
-                placeholder="Tell me who you want me to pretend to be."
-                className={errors.persona ? "input-error" : ""}
-              />
-              <button
-                onClick={() => handleClear("persona")}
-                type="button"
-                className="sec-clear-btn"
-                id="clear-persona"
-                title="reset persona"
-              >
-                Reset
-              </button>
+            <div className="input-area">
+              <div id="persona">
+                <textarea
+                  id="persona"
+                  name="persona"
+                  value={userInput.persona}
+                  onChange={handleUserInput}
+                  onKeyDown={handleKeyPress}
+                  placeholder="Tell me who you want me to pretend to be."
+                  className={errors.persona ? "input-error" : ""}
+                />
+                <button
+                  onClick={() => handleClear("persona")}
+                  type="button"
+                  className="sec-clear-btn"
+                  id="clear-persona"
+                  title="reset persona"
+                >
+                  Reset
+                </button>
+              </div>
+              {errors.persona && (
+                <p className="error-message">{errors.persona}</p>
+              )}
             </div>
-            {errors.persona && (
-              <p className="error-message">{errors.persona}</p>
-            )}
           </div>
           <div className="input">
             <div className="form-item-heading-area">
@@ -177,83 +179,89 @@ function InputContainer() {
                 Background information for control over the output
               </p>
             </div>
-            <div id="context">
-              <textarea
-                id="context"
-                name="context"
-                value={userInput.context}
-                onChange={handleUserInput}
-                onKeyDown={handleKeyPress}
-                placeholder="Tell me background information."
-                className={errors.context ? "input-error" : ""}
-              />
-              <button
-                onClick={() => handleClear("context")}
-                type="button"
-                className="sec-clear-btn"
-                id="clear-context"
-                title="reset context"
-              >
-                Reset
-              </button>
+            <div className="input-area">
+              <div id="context">
+                <textarea
+                  id="context"
+                  name="context"
+                  value={userInput.context}
+                  onChange={handleUserInput}
+                  onKeyDown={handleKeyPress}
+                  placeholder="Tell me background information."
+                  className={errors.context ? "input-error" : ""}
+                />
+                <button
+                  onClick={() => handleClear("context")}
+                  type="button"
+                  className="sec-clear-btn"
+                  id="clear-context"
+                  title="reset context"
+                >
+                  Reset
+                </button>
+              </div>
+              {errors.context && (
+                <p className="error-message">{errors.context}</p>
+              )}
             </div>
-            {errors.context && (
-              <p className="error-message">{errors.context}</p>
-            )}
           </div>
           <div className="input">
             <div className="form-item-heading-area">
               <label htmlFor="task">Task</label>
               <p className="note">Specific actions you need</p>
             </div>
-            <div id="task">
-              <textarea
-                id="task"
-                name="task"
-                value={userInput.task}
-                onChange={handleUserInput}
-                onKeyDown={handleKeyPress}
-                placeholder="Tell me what information you want me give me."
-                className={errors.task ? "input-error" : ""}
-              />
-              <button
-                onClick={() => handleClear("task")}
-                type="button"
-                className="sec-clear-btn"
-                id="clear-task"
-                title="reset task"
-              >
-                Reset
-              </button>
+            <div className="input-area">
+              <div id="task">
+                <textarea
+                  id="task"
+                  name="task"
+                  value={userInput.task}
+                  onChange={handleUserInput}
+                  onKeyDown={handleKeyPress}
+                  placeholder="Tell me what information you want me give me."
+                  className={errors.task ? "input-error" : ""}
+                />
+                <button
+                  onClick={() => handleClear("task")}
+                  type="button"
+                  className="sec-clear-btn"
+                  id="clear-task"
+                  title="reset task"
+                >
+                  Reset
+                </button>
+              </div>
+              {errors.task && <p className="error-message">{errors.task}</p>}
             </div>
-            {errors.task && <p className="error-message">{errors.task}</p>}
           </div>
           <div className="input">
             <div className="form-item-heading-area">
               <label htmlFor="output">Output</label>
               <p className="note">Dictate the style of responses</p>
             </div>
-            <div id="output">
-              <textarea
-                id="output"
-                name="output"
-                value={userInput.output}
-                onChange={handleUserInput}
-                onKeyDown={handleKeyPress}
-                placeholder="Tell me how you want me to respond to your request."
-                className={errors.output ? "input-error" : ""}
-              />
-              <button
-                onClick={() => handleClear("output")}
-                type="button"
-                className="sec-clear-btn"
-                id="clear-output"
-                title="reset output"
-              >
-                Reset
-              </button>
+              <div className="input-area">
+              <div id="output">
+                <textarea
+                  id="output"
+                  name="output"
+                  value={userInput.output}
+                  onChange={handleUserInput}
+                  onKeyDown={handleKeyPress}
+                  placeholder="Tell me how you want me to respond to your request."
+                  className={errors.output ? "input-error" : ""}
+                />
+                <button
+                  onClick={() => handleClear("output")}
+                  type="button"
+                  className="sec-clear-btn"
+                  id="clear-output"
+                  title="reset output"
+                >
+                  Reset
+                </button>
+              </div>
+              {errors.output && <p className="error-message">{errors.output}</p>}
             </div>
-            {errors.output && <p className="error-message">{errors.output}</p>}
           </div>
 
           <div className="input">
@@ -261,30 +269,31 @@ function InputContainer() {
               <label htmlFor="constraint">Constraint</label>
               <p className="note">Avoid items such as topics and tones</p>
             </div>
-
-            <div id="constraint">
-              <textarea
-                id="constraint"
-                name="constraint"
-                value={userInput.constraint}
-                onChange={handleUserInput}
-                onKeyDown={handleKeyPress}
-                placeholder="Tell me what to avoid."
-                className={errors.constraint ? "input-error" : ""}
-              />
-              <button
-                onClick={() => handleClear("constraint")}
-                type="button"
-                className="sec-clear-btn"
-                id="clear-constraint"
-                title="reset constraint"
-              >
-                Reset
-              </button>
+            <div className="input-area">
+              <div id="constraint">
+                <textarea
+                  id="constraint"
+                  name="constraint"
+                  value={userInput.constraint}
+                  onChange={handleUserInput}
+                  onKeyDown={handleKeyPress}
+                  placeholder="Tell me what to avoid."
+                  className={errors.constraint ? "input-error" : ""}
+                />
+                <button
+                  onClick={() => handleClear("constraint")}
+                  type="button"
+                  className="sec-clear-btn"
+                  id="clear-constraint"
+                  title="reset constraint"
+                >
+                  Reset
+                </button>
+              </div>
+              {errors.constraint && (
+                <p className="error-message">{errors.constraint}</p>
+              )}
             </div>
-            {errors.constraint && (
-              <p className="error-message">{errors.constraint}</p>
-            )}
           </div>
           <div id="form-level-buttons">
             <button

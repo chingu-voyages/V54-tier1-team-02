@@ -32,7 +32,7 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2em;
   line-height: 1.1;
   text-align: left;
   font-weight: normal;
@@ -102,6 +102,10 @@ button:focus-visible {
 .input { 
   padding-left: 0px;
   padding-right: 0.25em;
+}
+
+.input-area {
+  height: 150px;
 }
 
 .input label {
@@ -298,6 +302,10 @@ textarea {
     width: 1150px;
   }
 
+  h1 {
+    font-size: 3.2em;
+  }  
+
   p {
     font-size: 1em;
   }
@@ -325,7 +333,7 @@ textarea {
   }
 
   .result-box {
-    height: 898px;
+    height: 906px;
     overflow: auto;
   }
 
