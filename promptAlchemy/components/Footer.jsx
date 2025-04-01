@@ -15,7 +15,7 @@ function Footer() {
         <li> <a href="https://linkedin.com/in/andersonholland" target="_blank">Alison Holland, Developer</a></li>
       </ul>
       <ul>
-        <li> <a href="" target="_blank">JD Horton, Product Owner</a></li>
+        <li> JD Horton, Product Owner</li>
         <li> <a href="https://www.linkedin.com/in/chyna-stroud-csm-3448a9213" target="_blank">Chyna Stroud, Scrum Master</a></li>
       </ul>
     </div>
