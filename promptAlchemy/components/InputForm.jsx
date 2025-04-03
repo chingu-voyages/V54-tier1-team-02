@@ -154,7 +154,7 @@ function InputContainer() {
                   value={userInput.persona}
                   onChange={handleUserInput}
                   onKeyDown={handleKeyPress}
-                  placeholder="e.g., A marketing manager, a student, a chef"
+                  placeholder="You are a Product Owner, Scrum Master, UI/UX Designer, Web Developer, or Data Scientist who is at the beginning of your career and is looking to apply what you've learned to build practical experience to help you get noticed in the job market."
                   className={errors.persona ? "input-error" : ""}
                 />
                 <button
@@ -187,7 +187,7 @@ function InputContainer() {
                   value={userInput.context}
                   onChange={handleUserInput}
                   onKeyDown={handleKeyPress}
-                  placeholder="e.g., Planning a social media campaign, writing a research paper, creating a new recipe"
+                  placeholder="The information provided should assume that I am a Frontend Web Developer who understands the technical aspects of what is needed to build websites. But, I have not worked in team projects with individuals in different roles."
                   className={errors.context ? "input-error" : ""}
                 />
                 <button
@@ -218,7 +218,7 @@ function InputContainer() {
                   value={userInput.task}
                   onChange={handleUserInput}
                   onKeyDown={handleKeyPress}
-                  placeholder="e.g., Generate marketing copy, outline a thesis statement, list ingredients & instructions"
+                  placeholder="Provide a list of websites for organizations that provide programs and services which will help me transform what I've learned into experience that other job applicants will not have."
                   className={errors.task ? "input-error" : ""}
                 />
                 <button
@@ -247,7 +247,7 @@ function InputContainer() {
                   value={userInput.output}
                   onChange={handleUserInput}
                   onKeyDown={handleKeyPress}
-                  placeholder="e.g., Social media post text, structured research outline, recipe format"
+                  placeholder="The tone should be informal and the list of websites should include a link to the site, it's name, and cost information."
                   className={errors.output ? "input-error" : ""}
                 />
                 <button
@@ -277,7 +277,7 @@ function InputContainer() {
                   value={userInput.constraint}
                   onChange={handleUserInput}
                   onKeyDown={handleKeyPress}
-                  placeholder="e.g., Under 100 words, formal tone, kid-friendly language"
+                  placeholder="Avoid generating lots of text only a summary of the websites are needed. Also, responses should be tailored to readers with a high school level of education. Avoid overly technical responses."
                   className={errors.constraint ? "input-error" : ""}
                 />
                 <button
