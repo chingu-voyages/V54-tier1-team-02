@@ -154,7 +154,7 @@ function InputContainer() {
                   value={userInput.persona}
                   onChange={handleUserInput}
                   onKeyDown={handleKeyPress}
-                  placeholder="Tell me who you want me to pretend to be."
+                  placeholder="e.g., A marketing manager, a student, a chef"
                   className={errors.persona ? "input-error" : ""}
                 />
                 <button
@@ -187,7 +187,7 @@ function InputContainer() {
                   value={userInput.context}
                   onChange={handleUserInput}
                   onKeyDown={handleKeyPress}
-                  placeholder="Tell me background information."
+                  placeholder="e.g., Planning a social media campaign, writing a research paper, creating a new recipe"
                   className={errors.context ? "input-error" : ""}
                 />
                 <button
@@ -218,7 +218,7 @@ function InputContainer() {
                   value={userInput.task}
                   onChange={handleUserInput}
                   onKeyDown={handleKeyPress}
-                  placeholder="Tell me what information you want me give me."
+                  placeholder="e.g., Generate marketing copy, outline a thesis statement, list ingredients & instructions"
                   className={errors.task ? "input-error" : ""}
                 />
                 <button
@@ -247,7 +247,7 @@ function InputContainer() {
                   value={userInput.output}
                   onChange={handleUserInput}
                   onKeyDown={handleKeyPress}
-                  placeholder="Tell me how you want me to respond to your request."
+                  placeholder="e.g., Social media post text, structured research outline, recipe format"
                   className={errors.output ? "input-error" : ""}
                 />
                 <button
@@ -277,7 +277,7 @@ function InputContainer() {
                   value={userInput.constraint}
                   onChange={handleUserInput}
                   onKeyDown={handleKeyPress}
-                  placeholder="Tell me what to avoid."
+                  placeholder="e.g., Under 100 words, formal tone, kid-friendly language"
                   className={errors.constraint ? "input-error" : ""}
                 />
                 <button
