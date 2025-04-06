@@ -27,6 +27,15 @@ The structured methodology to follow for creating a prompt is called a [Pentagra
 
 Our app prompts you to include each component before generating a result.
 
+## 🛠️ Technologies
+
+Frontend: React + Vite – For building a fast, interactive, and modern user interface.
+
+API: Google Gemini – To generate intelligent responses based on user-generated prompts.
+
+Deployment: Netlify – For continuous deployment and hosting of our frontend application.
+
+UI Design: Figma – For designing and prototyping a cohesive user experience.
 
 ## ⚙️ Running the project
 
