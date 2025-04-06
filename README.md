@@ -55,7 +55,6 @@ UI Design: Figma – For designing and prototyping a cohesive user experience.
 ## 📚 Dependencies
 
     "@google/generative-ai": "^0.24.0",
-    "dotenv": "^16.4.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
