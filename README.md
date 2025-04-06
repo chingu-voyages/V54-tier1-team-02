@@ -1,14 +1,14 @@
-# PromptAlchemy
+# 🧪✨ PromptAlchemy
 
 A web application that helps users learn to build effective AI prompts.
 
-## Overview
+## 🧭 Overview
 
 This app was created through a [Chingu](https://www.chingu.io/) tier 1 voyage. As a team, we built a web application, PromptAlchemy, which lets its users become more effective at building AI prompts.
 ![Screenshot of blank fields in PromptAlchemy.](<images/Chingu v54 Project in use.PNG>)
 ![Screenshot of fields filled in and a response in PromptAlchemy.](<images\Chingu v54 Project in use.PNG>)
 
-## Features
+## 🚀 Features
 
 This application, follows a structured methodology to help the user build good prompts, and along the way learn to improve on them.
 
@@ -24,13 +24,14 @@ The structured methodology to follow for creating a prompt is called a [Pentagra
 
 Our app prompts you to include each component before generating a result.
 
-## Running the project
 
-### :globe_with_meridians: Live Version:
+## ⚙️ Running the project
+
+### 🌐 Live Version:
 
 [PromptAlchemy](https://promptalchemy-gemini.netlify.app/)
 
-### From the Repo:
+### 📦 From the Repo:
 
 1. Clone this project locally
 2. [Get a Gemini API Key](https://ai.google.dev/gemini-api/docs/api-key)
@@ -39,7 +40,7 @@ Our app prompts you to include each component before generating a result.
 5. Run `npm install` in your bash / command line
 6. Run `npm run dev` in your bash / command line
 
-## Dependencies
+## 📚 Dependencies
 
     "@google/generative-ai": "^0.24.0",
     "dotenv": "^16.4.7",
@@ -48,7 +49,7 @@ Our app prompts you to include each component before generating a result.
     "react-icons": "^5.5.0",
     "react-markdown": "^10.1.0"
 
-### Dev Dependencies
+### 🧰 Dev Dependencies
 
     "@eslint/js": "^9.21.0",
     "@types/react": "^19.0.10",
@@ -60,7 +61,7 @@ Our app prompts you to include each component before generating a result.
     "globals": "^15.15.0",
     "vite": "^6.2.0"
 
-## Our Team
+## 🤝 Our Team
 
 - Stephanie Leon, Developer: [GitHub](https://github.com/stefleon33) / [LinkedIn](https://www.linkedin.com/in/stephanie-leon33/)
 - Alison Holland, Developer [GitHub](https://github.com/alison-ah) / [LinkedIn](https://linkedin.com/in/andersonholland)
