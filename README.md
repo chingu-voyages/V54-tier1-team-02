@@ -73,6 +73,12 @@ UI Design: Figma – For designing and prototyping a cohesive user experience.
     "globals": "^15.15.0",
     "vite": "^6.2.0"
 
+## 🙏 Acknowledgements
+
+We would like to extend our heartfelt thanks to Chingu for making this project possible. Their support, community, and structured project-based learning environment provided the perfect foundation for us to collaborate, grow, and build something we're truly proud of.
+
+If you’re not yet a part of [Chingu](https://chingu.io/), we highly recommend checking it out. Chingu is a global learning community that helps aspiring developers, scrum masters, and product ownsers turn course and tutorial knowledge into real-world project experience. Through team voyages like this one, members gain the practical, hands-on skills that make them stand out in today’s job market.
+
 ## 🤝 Our Team
 
 - Stephanie Leon, Developer: [GitHub](https://github.com/stefleon33) / [LinkedIn](https://www.linkedin.com/in/stephanie-leon33/)
