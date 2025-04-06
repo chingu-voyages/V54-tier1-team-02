@@ -156,8 +156,8 @@ textarea {
 
 #clear-persona, #clear-context, #clear-task, #clear-output, #clear-constraint {
   position: absolute;
-  bottom: 0.5em;
-  right: 0em;
+  bottom: 0.75em;
+  right: 0.5em;
 }
 
 #form-level-buttons {
@@ -268,6 +268,14 @@ textarea {
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 536px) {
+  #clear-persona, #clear-context, #clear-task, #clear-output, #clear-constraint {
+    bottom: 0.5em;
+    right: 1em;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
   section {
@@ -276,6 +284,10 @@ textarea {
 
   textarea {
     width: 95%;
+  }
+
+  #clear-persona, #clear-context, #clear-task, #clear-output, #clear-constraint {
+    right: 0.25em;
   }
 
   .footer ul {
@@ -325,6 +337,10 @@ textarea {
 
   textarea {
     font-family: 1em;
+  }
+
+  #clear-persona, #clear-context, #clear-task, #clear-output, #clear-constraint {
+    right: -0.5em;
   }
 
   .result {
