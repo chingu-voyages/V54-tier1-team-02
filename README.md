@@ -5,8 +5,11 @@ A web application that helps users learn to build effective AI prompts.
 ## 🧭 Overview
 
 This app was created through a [Chingu](https://www.chingu.io/) tier 1 voyage. As a team, we built a web application, PromptAlchemy, which lets its users become more effective at building AI prompts.
-![Screenshot of blank fields in PromptAlchemy.](<images/Chingu v54 Project in use.PNG>)
-![Screenshot of fields filled in and a response in PromptAlchemy.](<images\Chingu v54 Project in use.PNG>)
+
+<p align="center">
+  <img src="images/Chingu v54 Project.PNG" alt="Blank fields" width="45%" />
+  <img src="images/Chingu v54 Project in use.PNG" alt="Fields filled and response" width="45%" />
+</p>
 
 ## 🚀 Features
 
