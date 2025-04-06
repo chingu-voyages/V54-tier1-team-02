@@ -26,7 +26,7 @@ Our app prompts you to include each component before generating a result.
 
 ## Running the project
 
-### Live Version:
+### :globe_with_meridians: Live Version:
 
 [PromptAlchemy](https://promptalchemy-gemini.netlify.app/)
 
