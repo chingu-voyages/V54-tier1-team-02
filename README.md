@@ -1,14 +1,17 @@
-# PromptAlchemy
+# 🧪✨ PromptAlchemy
 
 A web application that helps users learn to build effective AI prompts.
 
-## Overview
+## 🧭 Overview
 
 This app was created through a [Chingu](https://www.chingu.io/) tier 1 voyage. As a team, we built a web application, PromptAlchemy, which lets its users become more effective at building AI prompts.
-![Screenshot of blank fields in PromptAlchemy.](images\Chingu v54 Project.PNG)
-![Screenshot of fields filled in and a response in PromptAlchemy.](images\Chingu v54 Project in use.PNG)
 
-## Features
+<p align="center">
+  <img src="images/Chingu v54 Project.PNG" alt="Blank fields" width="45%" />
+  <img src="images/Chingu v54 Project in use.PNG" alt="Fields filled and response" width="45%" />
+</p>
+
+## 🚀 Features
 
 This application, follows a structured methodology to help the user build good prompts, and along the way learn to improve on them.
 
@@ -24,13 +27,23 @@ The structured methodology to follow for creating a prompt is called a [Pentagra
 
 Our app prompts you to include each component before generating a result.
 
-## Running the project
+## 🛠️ Technologies
 
-### :globe_with_meridians: Live Version:
+Frontend: React + Vite – For building a fast, interactive, and modern user interface.
+
+API: Google Gemini – To generate intelligent responses based on user-generated prompts.
+
+Deployment: Netlify – For continuous deployment and hosting of our frontend application.
+
+UI Design: Figma – For designing and prototyping a cohesive user experience.
+
+## ⚙️ Running the project
+
+### 🌐 Live Version:
 
 [PromptAlchemy](https://promptalchemy-gemini.netlify.app/)
 
-### From the Repo:
+### 📦 From the Repo:
 
 1. Clone this project locally
 2. [Get a Gemini API Key](https://ai.google.dev/gemini-api/docs/api-key)
@@ -39,7 +52,7 @@ Our app prompts you to include each component before generating a result.
 5. Run `npm install` in your bash / command line
 6. Run `npm run dev` in your bash / command line
 
-## Dependencies
+## 📚 Dependencies
 
     "@google/generative-ai": "^0.24.0",
     "dotenv": "^16.4.7",
@@ -48,7 +61,7 @@ Our app prompts you to include each component before generating a result.
     "react-icons": "^5.5.0",
     "react-markdown": "^10.1.0"
 
-### Dev Dependencies
+### 🧰 Dev Dependencies
 
     "@eslint/js": "^9.21.0",
     "@types/react": "^19.0.10",
@@ -60,7 +73,13 @@ Our app prompts you to include each component before generating a result.
     "globals": "^15.15.0",
     "vite": "^6.2.0"
 
-## Our Team
+## 🙏 Acknowledgements
+
+We would like to extend our heartfelt thanks to Chingu for making this project possible. Their support, community, and structured project-based learning environment provided the perfect foundation for us to collaborate, grow, and build something we're truly proud of.
+
+If you’re not yet a part of [Chingu](https://chingu.io/), we highly recommend checking it out. Chingu is a global learning community that helps aspiring developers, scrum masters, and product ownsers turn course and tutorial knowledge into real-world project experience. Through team voyages like this one, members gain the practical, hands-on skills that make them stand out in today’s job market.
+
+## 🤝 Our Team
 
 - Stephanie Leon, Developer: [GitHub](https://github.com/stefleon33) / [LinkedIn](https://www.linkedin.com/in/stephanie-leon33/)
 - Alison Holland, Developer [GitHub](https://github.com/alison-ah) / [LinkedIn](https://linkedin.com/in/andersonholland)
