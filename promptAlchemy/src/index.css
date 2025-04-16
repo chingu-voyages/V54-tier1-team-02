@@ -50,6 +50,18 @@ p {
   font-size: 16px;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .pentagram p {
   text-align: center;
   margin: 0.5em 0 2em;
@@ -93,10 +105,6 @@ button:focus-visible {
   width: 100%;
   align-items: center;
   margin-bottom: 40px;
-}
-
-#input-form-title {
-  display: none;
 }
 
 .input { 
