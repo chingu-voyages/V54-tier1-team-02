@@ -137,7 +137,7 @@ function InputContainer() {
   return (
     <section>
       <div className="input-form">
-        <h2 id="input-form-title">Input Form</h2>
+        <h2 id="input-form-title" className="sr-only">Input Form</h2>
         <form method="post" onSubmit={handleSubmit}>
           <div className="input">
             <div className="form-item-heading-area">
